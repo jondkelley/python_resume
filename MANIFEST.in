@@ -1,2 +1,2 @@
 include myresume/templates/*
-recursive-include myresume/static *.css *.map *.svg *.ttf *.eot *.js *.png *.jpg *.gif
+recursive-include myresume/static *.css *.map *.svg *.ttf *.eot *.js *.png *.jpg *.gif *.ico
