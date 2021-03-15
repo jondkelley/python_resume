@@ -1,8 +1,7 @@
 Resume - Jonathan D Kelley
 =====================================================
 
-I build this code to serve as an interactive resume on my website [jon-kelley.com](https://jon-kelley.com).
-
+I wrote this code to serve as an interactive resume on my website [jon-kelley.com](https://jon-kelley.com).
 This is designed to run on Kubernetes and runs in a Python3 container.
 
 ## Quick Start
