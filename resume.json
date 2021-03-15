@@ -207,6 +207,11 @@
   ],
   "skills": [
     {
+      "title": "Ansible",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
       "title": "BASH",
       "level": 5,
       "endorsement": ""
@@ -272,6 +277,11 @@
       "endorsement": ""
     },
     {
+      "title": "AWS DynamoDB",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
       "title": "Docker",
       "level": 5,
       "endorsement": ""
@@ -312,6 +322,11 @@
       "endorsement": ""
     },
     {
+      "title": "Terraform",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
       "title": "Git (SCM)",
       "level": 4,
       "endorsement": ""
@@ -347,12 +362,27 @@
       "endorsement": ""
     },
     {
+      "title": "Redis",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
       "title": "Zabbix",
       "level": 4,
       "endorsement": ""
     },
     {
       "title": "Networking",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "SaltStack",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Chef",
       "level": 4,
       "endorsement": ""
     },
