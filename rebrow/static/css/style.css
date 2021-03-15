@@ -26,7 +26,7 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 .icon.icon-email { background-position: 0px -96px; }
 
 .jumbotron {
-	background: no-repeat center right fixed url(/static/images/background_hall.jpg);
+	background: no-repeat center right fixed url(/static/images/background_lattice1.jpg);
 
 	-webkit-background-size: 100%; 
     -moz-background-size: 100%; 
@@ -38,8 +38,8 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 	-o-background-size: cover;
 	background-size: cover;
 	
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/background_hall.jpg', sizingMethod='scale')";
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/background_hall.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/background_lattice1.jpg', sizingMethod='scale')";
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/background_lattice1.jpg', sizingMethod='scale');
 	
 	margin-bottom: 0px;
 	padding: 0px;
