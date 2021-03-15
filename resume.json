@@ -186,10 +186,15 @@
       "level": "Full Time",
       "description": "Performed Linux technical support by phone / tickets. Did professional service migrations, hardware upgrades, cabinet wiring, and performed network maintenence in the datacenter on Cisco Catylist 6500 series hardware.",
       "accomplishments": [
-        "Item 1",
-        "Item 2",
-        "Item 3",
-        "Item 4"
+        "Performed phone and ticket work to meet customer SLA.",
+        "Managed OS patching, migrations, and upgrades as professional services to customers.",
+        "Worked as DC OPS managing hardware diagnostics, upgrades and provisioning.",
+        "Worked as DC network operations handling switch upgrades, troubleshooting, DDoS mitigation or disaster recovery.",
+        "Planned and executed primary data-center DNS cut-over to use new BIND stack with Linux HEARTBEAT fail-over. Wrote fail-over scripts to handle system failure with zero downtime in DNS lookups.",
+        "Diagnosed routing and other concerns escalating to network operations when required.",
+        "Upgraded Nagios monitoring to latest version and scaled for performance.",
+        "Upgraded MRTG graphing system for Cataylst switch monitoring to improve bandwidth graph capability.",
+        "Created SSL monitoring in Nagios for customers who paid for SSL."
       ],
       "start_date": "2006-07-01",
       "end_date": "2010-02-01",
@@ -201,6 +206,11 @@
       "location": "Bedford, TX",
       "level": "Full Time",
       "description": "Handled generalized Linux phone / ticket based technical support for a web-hosting firm. Supported Miva Merchant shopping, Cpanel and Flesk control panels.",
+      "accomplishments": [
+        "Handled Linux Admin tasks for helping customers install and configure software within the hosting environment.",
+        "Handled configuration of Merchant and other shopping utilities for customers who ordered the software.",
+        "Performed work in the data-center across the street when staffing was low, assisting colo clients as well as responding to NOC escalations."
+      ],
       "start_date": "2006-04-01",
       "end_date": "2006-07-01"
     }
