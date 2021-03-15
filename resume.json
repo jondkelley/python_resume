@@ -410,33 +410,7 @@
     }
   ],
   "tools": [],
-  "interests": [
-    {
-      "title": "Sports",
-      "description": "I couldn't live without sports. In the weekend you will find me riding my mountainbike - just check out my Runkeeper. Once or twice a week, you'll find me in the gym, running or on my mountainbike. I just love the adrenaline rush!",
-      "image": "sports.png"
-    },
-    {
-      "title": "Music",
-      "description": "I can listen to music all day. I have a varied taste of music and I listen to it at work, during sports, riding my bike, on the train... I play guitar myself and would love to own a drum-kit some day.",
-      "image": "music.png"
-    },
-    {
-      "title": "My Cats",
-      "description": "If you look up my social networks, you'll surely come across one of my cats. Because what is the internet without cats? Nothing, right? And I'm an internet man, so one and one makes two.",
-      "image": "cats.png"
-    },
-    {
-      "title": "Algorithms",
-      "description": "I love solving riddles and problems and building stuff from scratch. My strong suit is that I don't give up without a fight. When trying to find the solution to a problem, I will not quit until I find at least one. The satisfaction I get from solving a problem can really make my day.",
-      "image": "algorithms.png"
-    },
-    {
-      "title": "Travel",
-      "description": "When I was 19 I traveled by plane for the first time, and after that I was hooked. I went to the United States twice, Surinam, Greece, Malta, the Canary Islands and more. But as much as I love the sun, I also love going to the Alps for some snowboarding.",
-      "image": "travel.png"
-    }
-  ],
+  "interests": [],
   "projects": [
     {
       "title": "python_resume",
