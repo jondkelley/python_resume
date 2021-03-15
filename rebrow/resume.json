@@ -217,38 +217,33 @@
       "endorsement": ""
     },
     {
-      "title": "Ruby",
-      "level": 3,
+      "title": "Jenkins",
+      "level": 5,
       "endorsement": ""
     },
     {
-      "title": "Git (SCM)",
-      "level": 4,
+      "title": "HTML(5)",
+      "level": 5,
       "endorsement": ""
     },
     {
-      "title": "Python",
-      "level": 4,
+      "title": "CSS(3)",
+      "level": 5,
       "endorsement": ""
     },
     {
-      "title": "Postfix",
-      "level": 4,
+      "title": "TeamCity",
+      "level": 5,
       "endorsement": ""
     },
     {
-      "title": "Nagios",
-      "level": 4,
+      "title": "CircleCI",
+      "level": 5,
       "endorsement": ""
     },
     {
-      "title": "Zabbix",
-      "level": 4,
-      "endorsement": ""
-    },
-    {
-      "title": "Sensu",
-      "level": 3,
+      "title": "Bamboo",
+      "level": 5,
       "endorsement": ""
     },
     {
@@ -257,27 +252,7 @@
       "endorsement": ""
     },
     {
-      "title": "PHP",
-      "level": 3,
-      "endorsement": ""
-    },
-    {
-      "title": "C/C++",
-      "level": 2,
-      "endorsement": ""
-    },
-    {
-      "title": "Java",
-      "level": 2,
-      "endorsement": ""
-    },
-    {
-      "title": "Golang",
-      "level": 2,
-      "endorsement": ""
-    },
-    {
-      "title": "Linux",
+      "title": "MongoDB",
       "level": 5,
       "endorsement": ""
     },
@@ -297,33 +272,13 @@
       "endorsement": ""
     },
     {
-      "title": "Oracle",
-      "level": 2,
-      "endorsement": ""
-    },
-    {
-      "title": "Networking",
-      "level": 4,
-      "endorsement": ""
-    },
-    {
-      "title": "HTML(5)",
+      "title": "Docker",
       "level": 5,
       "endorsement": ""
     },
     {
-      "title": "CSS(3)",
+      "title": "Linux",
       "level": 5,
-      "endorsement": ""
-    },
-    {
-      "title": "Javascript",
-      "level": 2,
-      "endorsement": ""
-    },
-    {
-      "title": "JQuery",
-      "level": 3,
       "endorsement": ""
     },
     {
@@ -334,21 +289,6 @@
     {
       "title": "Apache",
       "level": 5,
-      "endorsement": ""
-    },
-    {
-      "title": "Tomcat",
-      "level": 4,
-      "endorsement": ""
-    },
-    {
-      "title": "Docker",
-      "level": 5,
-      "endorsement": ""
-    },
-    {
-      "title": "Kubernetes",
-      "level": 4,
       "endorsement": ""
     },
     {
@@ -372,13 +312,93 @@
       "endorsement": ""
     },
     {
+      "title": "Git (SCM)",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Python",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Postfix",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Nagios",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Tomcat",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Kubernetes",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
       "title": "ElasticSearch",
       "level": 4,
       "endorsement": ""
     },
     {
-      "title": "MongoDB",
-      "level": 5,
+      "title": "Zabbix",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Networking",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Ruby",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "Sensu",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "PHP",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "JQuery",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "C/C++",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Java",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Golang",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Oracle",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Javascript",
+      "level": 2,
       "endorsement": ""
     }
   ],
@@ -389,116 +409,7 @@
       "endorsement": "Daily use"
     }
   ],
-  "tools": [
-    {
-      "title": "Notepad++",
-      "level": 5,
-      "level_detailed": 9,
-      "endorsement": "8 years"
-    },
-    {
-      "title": "Coda2",
-      "level": 4,
-      "level_detailed": 8,
-      "endorsement": "4 years"
-    },
-    {
-      "title": "PHPStorm",
-      "level": 4,
-      "level_detailed": 8,
-      "endorsement": "2 years"
-    },
-    {
-      "title": "FileZilla",
-      "level": 5,
-      "level_detailed": 9,
-      "endorsement": "8 years"
-    },
-    {
-      "title": "MS Office",
-      "level": 5,
-      "level_detailed": 9,
-      "endorsement": "10+ years"
-    },
-    {
-      "title": "Sublime Text",
-      "level": 4,
-      "level_detailed": 7,
-      "endorsement": "2 years"
-    },
-    {
-      "title": "Windows",
-      "level": 5,
-      "level_detailed": 9,
-      "endorsement": "10+ years"
-    },
-    {
-      "title": "Mac",
-      "level": 5,
-      "level_detailed": 9,
-      "endorsement": "5 years"
-    },
-    {
-      "title": "Firefox",
-      "level": 5,
-      "level_detailed": 9,
-      "endorsement": "8 years"
-    },
-    {
-      "title": "Webkit browsers",
-      "level": 5,
-      "level_detailed": 9,
-      "endorsement": "6 years"
-    },
-    {
-      "title": "Internet Explore 10+",
-      "level": 4,
-      "level_detailed": 8,
-      "endorsement": "8 years"
-    },
-    {
-      "title": "Adobe Fireworks",
-      "level": 4,
-      "level_detailed": 8,
-      "endorsement": "8 years"
-    },
-    {
-      "title": "Adobe Photoshop",
-      "level": 3,
-      "level_detailed": 6,
-      "endorsement": "6 years"
-    },
-    {
-      "title": "Sketch",
-      "level": 2,
-      "level_detailed": 4,
-      "endorsement": "1 years"
-    },
-    {
-      "title": "Subversion",
-      "level": 4,
-      "level_detailed": 7,
-      "endorsement": "5 years"
-    },
-    {
-      "title": "Git / Git Flow",
-      "level": 4,
-      "level_detailed": 8,
-      "endorsement": "4 year"
-    },
-    {
-      "title": "Atlassian / Jira",
-      "level": 4,
-      "level_detailed": 7,
-      "endorsement": "3 year"
-    },
-    {
-      "title": "MAMP",
-      "level": 4,
-      "level_detailed": 8,
-      "endorsement": "2 year"
-    }
-  ],
+  "tools": [],
   "interests": [
     {
       "title": "Sports",
