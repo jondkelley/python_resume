@@ -1,0 +1,580 @@
+{
+  "profile": {
+    "first_name": "Jonathan",
+    "middle_name": "D",
+    "last_name": "Kelley",
+    "tagline": "Linux Systems / Python Devops / Site Reliability Engineer",
+    "date_of_birth": "1985-05-02",
+    "place_of_birth": "Dallas",
+    "biography": "I am a 14 year internet technology veteran with a passion for devops and site reliability. I got my start in the late 1990s in highschool over IRC and designing web pages on Redhat Linux 9 (Shrike). \n\nI consider myself an expert at Linux, Kubernetes, Networking, AWS and all the things in between.",
+    "current_location": {
+      "street": "********",
+      "housenumber": 0,
+      "zipcode": "********",
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "USA",
+      "planet": "Earth"
+    }
+  },
+  "contact_details": {
+    "email": "jonk@omg.lol",
+    "phone": "8179-998-200",
+    "skype": "********",
+    "website": "https://jon-kelley.com/",
+    "keybase": "https://keybase.io/jondkelley",
+    "linkedin": "https://linkedin.com/in/jonathandkelley/"
+  },
+  "educations": [
+    {
+      "title": "High School",
+      "specification": "Computer Science (Specialization: A+)",
+      "location": "Fort Worth, TX",
+      "level": "Highschool",
+      "description": "I graduated highschool, where I enjoyed doing science, math, biology and arts. I realized in my freshman year of school that I wanted to do something with Linux, so I learned PHP and other technologies.",
+      "start_date": "2014-03-01",
+      "end_date": "2014-05-01",
+      "completed": true
+    }
+  ],
+  "careers": [
+    {
+      "title": "LogDNA",
+      "specification": "Sr Cloud Support Engineer",
+      "location": "San Francisco Bay Area",
+      "level": "Full Time",
+      "description": "Works on the support team supporting a myriad of log ingestion configurations as well as helping the SRE team during incidents.",
+      "accomplishments": [
+        "Built a support dashboard for support to manage and integrated Flask/Rebrow Redis blueprints into the app along with Python- eve for full-search MongoORM via REST. All behind python-authlib and OpenIDConnect/Okta for RBAC.",
+        "Added functionality to support dashboard to look into ElasticSearch field mappings to troubleshoot index limits and indicate growth needs for customers.",
+        "Building tools and enhancing the capacity for support to serve logs for our customers.",
+        "Expanding access tools to internal CLI python client for better integration for the SRE’s",
+        "Redeveloped the ansible integration for LogDNA for a variety of new features for our customers.",
+        "Developed a proxy request tool for webhooks so support can easily debug webhook payloads.",
+        "Rebuilt Ansible-logdna handler in Python (git: logdna/ansible-logdna PR #8) to improve functionality and modernize the framework.",
+        "Developed a proxy request tool for support to debug webhook payloads, a bit more purpose oriented than netcat .",
+        "Regularly contributes to our internal tooling logdnactl which uses the k8s api and pymongo libraries to manage administrative operations across the product.",
+        "Helps take senior escalations for k8s agent, logstash, IBM Cloudfoundry, logspout and other products.",
+        "Assists the production SRE team during incidents and outages with generalized investigation of k8s stack / node failures on IBM and helps act as a technical liaison to IBM incident managers."
+      ],
+      "start_date": "2019-06-01",
+      "end_date": null,
+      "link": "http://logdna.com"
+    },
+    {
+      "title": "Doximity, Inc.",
+      "specification": "Devops Engineer",
+      "location": "San Francisco Bay Area",
+      "level": "Full Time",
+      "description": "Managed a rapidly growing real-estate SaaS platform with over 10,000 real estate brokers pages deployed through Wordpress.",
+      "accomplishments": [
+        "Built ansible/terraform based deployment system for Kubernetes and Istio onto EKS so the entire Doximity platform could be migrated.",
+        "Moved Jenkins jobs from traditional EC2 swarm builders over to ECS based pipelines for better resource utilization / cost saving.",
+        "Managed application cookbooks in Chef as well as dependencies for patch management and better inspect testing / kitchen tests.",
+        "Configured Sensu monitoring scripts for production systems.",
+        "Built Jenkins automation for Chef jobs using Jenkins Job Builder.",
+        "Refactored Terraform across teams using multiple statefiles using both Jenkins pipelines and Atlantis. Migrated systems to modules rather then sprawled HCL resources."
+      ],
+      "start_date": "2019-05-01",
+      "end_date": "2020-05-01",
+      "link": "http://doximity.com"
+    },
+    {
+      "title": "BoomTown!",
+      "specification": "Devops Engineer / Site Reliability Engineer",
+      "location": "Charleston, SC",
+      "level": "Full Time",
+      "description": "Managed a rapidly growing real-estate SaaS platform with over 10,000 real estate brokers pages deployed through Wordpress.",
+      "accomplishments": [
+        "Subject matter expert and mentor for Linux applications and platform tools.",
+        "Re-tooled container stack for frontend Wordpress product from 5 year old shell magic to docker-compose v3 + python-paver build process (for gulp/yarn/phpunit)",
+        "Upgraded php-fpm to PHP 7 from legacy PHP 5 stack, with weighted load canary testing as proof to launch.",
+        "Managed TeamCity build pipelines along with Jenkins for operational tasks.",
+        "Works with Varnishd, Memcached, Wordpress Network Sites, HAProxy, MySQL and Docker.",
+        "Uses Ansible to convert stacks previously hand-hacked into ground-up infrastructure as code.",
+        "Works with common Amazon AWS toolsets such as ECS, EC2, VPC, ELB, SQS and Lambda's.",
+        "Participates in on-call SRE style rotation for a split Windows / Linux environment."
+      ],
+      "start_date": "2018-04-01",
+      "end_date": "2019-05-01",
+      "link": "http://boomtownroi.com"
+    },
+    {
+      "title": "Rackspace",
+      "specification": "Linux Systems Engineer II",
+      "location": "Dallas, TX",
+      "level": "Full Time",
+      "description": "Worked with the Cloud Integrations Team / Rackspace Internal Tools Engineering team.",
+      "accomplishments": [
+        "Migrated tooling from Puppet2 to Puppet3 with PuppetDB, Hiera, puppetserver, directory environments and wrote a tool to wrap r10k. Security compliant PuppetDB database security model. This reduces complexity and applies patterns we were missing previously.",
+        "Maintains Ansible modules that allow us to store firewall configurations in git. Built a release pipeline to deploy on git push. This builds a \"working documentation\" and a git log to make instant rollbacks a snap in production environments.",
+        "Automation work with Cisco 6509 routers and Catalyst switching platform.",
+        "Built & configured Cisco ASA 5585 (ASA/IOS 8.3) for routing behind protected VLANS in hot-standby configuration using VRRP.",
+        "Implemented FreeIPA IAM solution to offer Kerberos and LDAP authentication.",
+        "Help start conversion of 230 or so Jenkins jobs to store them in Yaml and re-deploy with a tool called Jenkins Job builder. This helps enable full Jenkins disaster recovery in <1 hour instead of >2 weeks."
+      ],
+      "start_date": "2014-08-01",
+      "end_date": "2017-10-01",
+      "link": "http://rackspace.com"
+    },
+    {
+      "title": "Rackspace",
+      "specification": "Linux Systems Engineer I",
+      "location": "Dallas, TX",
+      "level": "Full Time",
+      "description": "Worked with the Cloud Integrations Team / Rackspace Internal Tools Engineering team.",
+      "accomplishments": [
+        "Built continuous integration in Jenkins for 5 new products using a python API we wrote to trigger builds on a build server and cycling app deployments.",
+        "Wrote python SDK for build system platform and deployment system so developers can hook, deploy and release 4 products via REST api from python CLI or jenkins or virtually anything.",
+        "Moved apps to hosted Mongo service called Objectrocket to keep in-house operations costs at a minimum.",
+        "Manages staging,pre prod and prod environments for complex Ruby web app that 6000+ growing employees use 24/7 to manage the administrative backends for the worlds 2nd largest public cloud.",
+        "Manages deployments in one-click (okay its actually 3 clicks) fashion using Salt and yum repositories to distribute software and configurations.",
+        "Handling deployment and design considerations for next-gen architecture replacing legacy internal controls design from serial to fully async process with a service backend layer to connect to backends/dbs/apis. The next gen is Python 3/Tornado with Angular.js web frontends. This is to replace a traditionally monolithic serial threaded Ruby 1.8.7 application on Phusion Passenger which bundled business logic and just couldn't scale.",
+        "Seeing weakpoints in ops/qe tests I have written BDD Gherkin style templates in pyhon using \"behave\" to test any API that is REST. Could be extremely helpful for ops or QA functional end to end testing. It's in my projects section called testvAPI."
+      ],
+      "start_date": "2010-02-01",
+      "end_date": "2011-03-01",
+      "link": "http://rackspace.com"
+    },
+    {
+      "title": "Rackspace",
+      "specification": "Linux Systems Administrator III",
+      "location": "Dallas, TX",
+      "level": "Full Time",
+      "description": "Worked on the openstack / cloud servers team managing the customer facing control panel systems.",
+      "accomplishments": [
+        "Works closely with Cloud integration teams running deployment and maintenance on large-scale backend infastructure used for the world's 2nd largest Public Cloud.",
+        "7+ years hands-on experience with Linux (Redhat/Debian)",
+        "Expertise diagnosing complex Linux application and system problems.",
+        "Updates and writes deployment templates and syntax for Puppet/Chef",
+        "Subject matter expert and senior support escalation for Cloud Load Balancers, Cloud Databases, Cloud Compute and infastructure.",
+        "Designed migration plans of our Cloud identity token API of multi node environment. Moved identity database cluster and load balancer stack into new subnet while also performing schema upgrades and a software upgrade dependent on schema changes with record setting minimal impacting downtime.",
+        "Takes direct action to correct cloud infastructure issues in an oncall 24/7 environment.",
+        "Has worked on identifying the root cause for key and critical issues in various application stacks throughout Rackspace Cloud and helped identify and report bugs, issues, or aid in fixing with appropriate product development groups.",
+        "Deploys Tomcat application code releases on a regular basis to staging and production sometimes under tight deadlines and always zero downtime.",
+        "Experience with the entire Rackspace Cloud suite including parts of OpenStack as well as experience writing and deploying Python applications that utilize public and internal API's.",
+        "Conceptualized, wrote and built monitoring tools and metrics collection systems never before used to help track health of various products and their subsystems and is currently used as an early warning system to service faults in various API's within Rackspace.",
+        "Serve as an escalation point for all Rackspace Cloud products in the Rackspace suite.",
+        "Plans efficient cloud resource consumption in new/existing environments for internal infastructure.",
+        "Interview new candidates for jobs in cross-team discipline."
+      ],
+      "start_date": "2011-03-01",
+      "end_date": "2013-04-01",
+      "link": "http://rackspace.com"
+    },
+    {
+      "title": "Zixcorp",
+      "specification": "Embedded Device Support Engineer II",
+      "location": "Dallas, TX",
+      "level": "Full Time",
+      "description": "Managed on-premise and SaaS based solution for HIPAA encryption. Supported Java Tomcat application as well as Postfix mail system. Managed network security policies and on-premise datacenter networks.",
+      "accomplishments": [
+        "Worked in a HIPAA compliant environment dealing with personal data e-mail encryption with well-recognized companies and government agencies.",
+        "Worked in accordance with UK data privacy and export laws in accordance to mail administration.",
+        "Worked as administrator for E-Mail appliance based on Postfix that implemented FIPS complaint e-mail encryption solution with SSL failover to HTTPS webpage-gateway for secure email transmission.",
+        "Handled telephone support with customers which located the appliance in their own datacenters, often assisting with network troubleshooting in very unfamiliar network environments.",
+        "Help troubleshoot mailflow issues with different network topologies and network layouts with dozens of companies on a daily basis."
+      ],
+      "start_date": "2010-02-01",
+      "end_date": "2011-03-01",
+      "link": "http://zixcorp.com"
+    },
+    {
+      "title": "1-800-Hosting",
+      "specification": "Linux Administrator II",
+      "location": "Dallas, TX",
+      "level": "Full Time",
+      "description": "Performed Linux technical support by phone / tickets. Did professional service migrations, hardware upgrades, cabinet wiring, and performed network maintenence in the datacenter on Cisco Catylist 6500 series hardware.",
+      "accomplishments": [
+        "Item 1",
+        "Item 2",
+        "Item 3",
+        "Item 4"
+      ],
+      "start_date": "2006-07-01",
+      "end_date": "2010-02-01",
+      "link": "http://800hosting.com"
+    },
+    {
+      "title": "C I Host",
+      "specification": "Linux Technical Support 1",
+      "location": "Bedford, TX",
+      "level": "Full Time",
+      "description": "Handled generalized Linux phone / ticket based technical support for a web-hosting firm. Supported Miva Merchant shopping, Cpanel and Flesk control panels.",
+      "start_date": "2006-04-01",
+      "end_date": "2006-07-01"
+    }
+  ],
+  "skills": [
+    {
+      "title": "BASH",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "REST Frameworks",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Ruby",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "Git (SCM)",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Python",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Postfix",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Nagios",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Zabbix",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Sensu",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "Observium",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "PHP",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "C/C++",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Java",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Golang",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Linux",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "DNS",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "MySQL",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Postgres",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Oracle",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Networking",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "HTML(5)",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "CSS(3)",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Javascript",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "JQuery",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "Nginx",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Apache",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Tomcat",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Docker",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Kubernetes",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "JSON",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "XML",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Bootstrap Framework",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Wordpress",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "ElasticSearch",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "MongoDB",
+      "level": 5,
+      "endorsement": ""
+    }
+  ],
+  "languages": [
+    {
+      "title": "English",
+      "level": 5,
+      "endorsement": "Daily use"
+    }
+  ],
+  "tools": [
+    {
+      "title": "Notepad++",
+      "level": 5,
+      "level_detailed": 9,
+      "endorsement": "8 years"
+    },
+    {
+      "title": "Coda2",
+      "level": 4,
+      "level_detailed": 8,
+      "endorsement": "4 years"
+    },
+    {
+      "title": "PHPStorm",
+      "level": 4,
+      "level_detailed": 8,
+      "endorsement": "2 years"
+    },
+    {
+      "title": "FileZilla",
+      "level": 5,
+      "level_detailed": 9,
+      "endorsement": "8 years"
+    },
+    {
+      "title": "MS Office",
+      "level": 5,
+      "level_detailed": 9,
+      "endorsement": "10+ years"
+    },
+    {
+      "title": "Sublime Text",
+      "level": 4,
+      "level_detailed": 7,
+      "endorsement": "2 years"
+    },
+    {
+      "title": "Windows",
+      "level": 5,
+      "level_detailed": 9,
+      "endorsement": "10+ years"
+    },
+    {
+      "title": "Mac",
+      "level": 5,
+      "level_detailed": 9,
+      "endorsement": "5 years"
+    },
+    {
+      "title": "Firefox",
+      "level": 5,
+      "level_detailed": 9,
+      "endorsement": "8 years"
+    },
+    {
+      "title": "Webkit browsers",
+      "level": 5,
+      "level_detailed": 9,
+      "endorsement": "6 years"
+    },
+    {
+      "title": "Internet Explore 10+",
+      "level": 4,
+      "level_detailed": 8,
+      "endorsement": "8 years"
+    },
+    {
+      "title": "Adobe Fireworks",
+      "level": 4,
+      "level_detailed": 8,
+      "endorsement": "8 years"
+    },
+    {
+      "title": "Adobe Photoshop",
+      "level": 3,
+      "level_detailed": 6,
+      "endorsement": "6 years"
+    },
+    {
+      "title": "Sketch",
+      "level": 2,
+      "level_detailed": 4,
+      "endorsement": "1 years"
+    },
+    {
+      "title": "Subversion",
+      "level": 4,
+      "level_detailed": 7,
+      "endorsement": "5 years"
+    },
+    {
+      "title": "Git / Git Flow",
+      "level": 4,
+      "level_detailed": 8,
+      "endorsement": "4 year"
+    },
+    {
+      "title": "Atlassian / Jira",
+      "level": 4,
+      "level_detailed": 7,
+      "endorsement": "3 year"
+    },
+    {
+      "title": "MAMP",
+      "level": 4,
+      "level_detailed": 8,
+      "endorsement": "2 year"
+    }
+  ],
+  "interests": [
+    {
+      "title": "Sports",
+      "description": "I couldn't live without sports. In the weekend you will find me riding my mountainbike - just check out my Runkeeper. Once or twice a week, you'll find me in the gym, running or on my mountainbike. I just love the adrenaline rush!",
+      "image": "sports.png"
+    },
+    {
+      "title": "Music",
+      "description": "I can listen to music all day. I have a varied taste of music and I listen to it at work, during sports, riding my bike, on the train... I play guitar myself and would love to own a drum-kit some day.",
+      "image": "music.png"
+    },
+    {
+      "title": "My Cats",
+      "description": "If you look up my social networks, you'll surely come across one of my cats. Because what is the internet without cats? Nothing, right? And I'm an internet man, so one and one makes two.",
+      "image": "cats.png"
+    },
+    {
+      "title": "Algorithms",
+      "description": "I love solving riddles and problems and building stuff from scratch. My strong suit is that I don't give up without a fight. When trying to find the solution to a problem, I will not quit until I find at least one. The satisfaction I get from solving a problem can really make my day.",
+      "image": "algorithms.png"
+    },
+    {
+      "title": "Travel",
+      "description": "When I was 19 I traveled by plane for the first time, and after that I was hooked. I went to the United States twice, Surinam, Greece, Malta, the Canary Islands and more. But as much as I love the sun, I also love going to the Alps for some snowboarding.",
+      "image": "travel.png"
+    }
+  ],
+  "projects": [
+    {
+      "title": "python_resume",
+      "description": "Just another example of the power behind Flask / Jinja2 and Twitter Bootstrap.",
+      "tagline": "This resume's backend!",
+      "tags": "Python, Flask, Bootstrap, Jinja2, Resume",
+      "link": "https://github.com/jondkelley/python_resume"
+    },
+    {
+      "title": "logdna_line_export_cli",
+      "description": "This command will recursively fetch all logs from the logdna export API. This is useful to get logs beyond the 10,000 line limit as the API does not natively provide pagination.",
+      "tagline": "A paginator for LogDNA log export",
+      "tags": "Python, Recursion, Pagination",
+      "link": "https://github.com/jondkelley/logdna_line_export_cli"
+    },
+    {
+      "title": "rebrow_modernized",
+      "description": "Built for the Python developer who needs to look into a Redis store. Allows for inspection and deletion of keys and follows PubSub messages. Also displays some runtime and configuration information.",
+      "tagline": "Redis \"workbench\" style tool in Python/Flask.",
+      "tags": "Python, Flask, Bootstrap, Redis",
+      "link": "https://github.com/jondkelley/rebrow-modernized"
+    },
+    {
+      "title": "zabbix_api_monitor",
+      "description": "This was created to monitor HTTP / REST Endpoints under Zabbix.",
+      "tagline": "A monitoring plugin for Zabbix.",
+      "tags": "Python, REST, Monitoring, Zabbix, HTTP",
+      "link": "https://github.com/jonkelleyatrackspace/zabbix_url_monitor"
+    },
+    {
+      "title": "canakit1104-api",
+      "description": "This was created to expose a REST API for a relay board microcontroller so we could build light-based alerting systems while at Rackspace.",
+      "tagline": "REST API to drive electronic relays.",
+      "tags": "Python, REST, Monitoring, Electronics, Relay",
+      "link": "https://github.com/jonkelleyatrackspace/canakit1104-api"
+    },
+    {
+      "title": "testVapi",
+      "description": "Based on the python behave features this project emulates a cucumber style syntax to run HTTP API tests and is able to forward the messages to ELK stack. This uses a langage called Gherkin to make plain-english QA testing a breeze.",
+      "tagline": "Creative python suite which runs QA tests using plain English syntax.",
+      "tags": "Python, Elk, Behave, Cucumber, Gherkin",
+      "link": "https://github.com/jonkelleyatrackspace/testvapi"
+    },
+    {
+      "title": "vagrantfile-skel",
+      "description": "I've made this repo because I keep encountering quick environments I need from time to time. I might as well collect them together here.",
+      "tagline": "Common Vagrantfiles I tend to be using",
+      "tags": null,
+      "link": "https://github.com/jondkelley/vagrantfile-skel"
+    }
+  ]
+}

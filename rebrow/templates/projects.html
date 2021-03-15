@@ -1,0 +1,38 @@
+<h2>Projects / Portfolio</h2>
+<p class="lead">
+	&ldquo;You can do anything you set your mind to.&rdquo;<br />- Benjamin Franklin
+</p>
+
+<hr />
+
+{% if resume['projects']|length > 0 %}
+<div class="projects">
+	{% for project in resume['projects'] %}	
+	<div class="projects row">
+		<div class="col-md-4">
+			<h4>{{ project['title'] }}</h4>
+			<p class="projects-period">
+			</p>
+		</div>
+		<div class="col-md-8">
+			<p>
+				
+				{% if project['tagline'] %}
+					<strong>{{ project['tagline'] }}</strong>
+				{% endif %}
+				</br>
+				<span class="hidden-phone">
+					{{ project['description'] }}
+				</span>
+				</br>
+				<a href="{{ project['link'] }}" target="_blank">{{ project['link'] }}</a>
+			</p>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% else %}
+<div class="alert alert-warning">
+	No projects were found in this resume
+</div>
+{% endif %}

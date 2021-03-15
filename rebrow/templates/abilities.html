@@ -1,0 +1,193 @@
+<h2>Abilities</h2>
+<p class="lead">
+	&ldquo;Life without knowledge is death in disguise.&rdquo;<br />- Talib Kweli
+</p>
+
+<hr />
+
+<h3>Skills</h3>
+
+<div class="row">
+
+	{% if resume['skills']|length > 0 %}
+		{% for skill in resume['skills'] | split_list_one %}
+		<div class="col-md-6">
+			<ul class="no-bullets">
+				<li>
+					<span class="ability-title">{{ skill['title'] }}</span>
+					<span class="ability-score">
+
+						{% set count = namespace(value=0) %}
+						{% for i in range(0, skill['level']) %}
+
+							<span class="glyphicon glyphicon-star filled"></span>
+						  {% set count.value = count.value + 1 %}
+						{% endfor %}
+
+						{% set blankcount = 5 - count.value%}
+						{% for i in range(0, blankcount) %}
+							<span class="glyphicon glyphicon-star"></span>
+						{% endfor %}
+
+					</span>
+				</li>
+			</ul>
+		</div>
+		{% endfor %}
+			{% for skill in resume['skills'] | split_list_two %}
+			<div class="col-md-6">
+				<ul class="no-bullets">
+					<li>
+						<span class="ability-title">{{ skill['title'] }}</span>
+						<span class="ability-score">
+
+							{% set count = namespace(value=0) %}
+							{% for i in range(0, skill['level']) %}
+
+								<span class="glyphicon glyphicon-star filled"></span>
+							  {% set count.value = count.value + 1 %}
+							{% endfor %}
+
+							{% set blankcount = 5 - count.value%}
+							{% for i in range(0, blankcount) %}
+								<span class="glyphicon glyphicon-star"></span>
+							{% endfor %}
+
+						</span>
+					</li>
+				</ul>
+			</div> 
+			{% endfor %}
+		{% else %}
+		
+		<div class="alert alert-warning">
+			No skills were found in this resume
+		</div>
+	{% endif %}
+	
+</div>
+
+<hr />
+
+<h3>Languages</h3>
+
+<div class="row">
+	{% if resume['languages']|length > 0 %}
+		{% for skill in resume['languages'] | split_list_one %}
+		<div class="col-md-6">
+			<ul class="no-bullets">
+				<li>
+					<span class="ability-title">{{ skill['title'] }}</span>
+					<span class="ability-score">
+
+						{% set count = namespace(value=0) %}
+						{% for i in range(0, skill['level']) %}
+
+							<span class="glyphicon glyphicon-star filled"></span>
+						  {% set count.value = count.value + 1 %}
+						{% endfor %}
+
+						{% set blankcount = 5 - count.value%}
+						{% for i in range(0, blankcount) %}
+							<span class="glyphicon glyphicon-star"></span>
+						{% endfor %}
+
+					</span>
+				</li>
+			</ul>
+		</div>
+		{% endfor %}
+			{% for skill in resume['languages'] | split_list_two %}
+			<div class="col-md-6">
+				<ul class="no-bullets">
+					<li>
+						<span class="ability-title">{{ skill['title'] }}</span>
+						<span class="ability-score">
+
+							{% set count = namespace(value=0) %}
+							{% for i in range(0, skill['level']) %}
+
+								<span class="glyphicon glyphicon-star filled"></span>
+							  {% set count.value = count.value + 1 %}
+							{% endfor %}
+
+							{% set blankcount = 5 - count.value%}
+							{% for i in range(0, blankcount) %}
+								<span class="glyphicon glyphicon-star"></span>
+							{% endfor %}
+
+						</span>
+					</li>
+				</ul>
+			</div> 
+			{% endfor %}
+		{% else %}
+		
+		<div class="alert alert-warning">
+			No languages were found in this resume
+		</div>
+	{% endif %}
+</div>
+
+<hr />
+
+<!-- 
+<h3>Tools</h3>
+
+<div class="row">
+	{% if resume['tools']|length > 0 %}
+		{% for skill in resume['tools'] | split_list_one %}
+		<div class="col-md-6">
+			<ul class="no-bullets">
+				<li>
+					<span class="ability-title">{{ skill['title'] }}</span>
+					<span class="ability-score">
+
+						{% set count = namespace(value=0) %}
+						{% for i in range(0, skill['level']) %}
+
+							<span class="glyphicon glyphicon-star filled"></span>
+						  {% set count.value = count.value + 1 %}
+						{% endfor %}
+
+						{% set blankcount = 5 - count.value%}
+						{% for i in range(0, blankcount) %}
+							<span class="glyphicon glyphicon-star"></span>
+						{% endfor %}
+
+					</span>
+				</li>
+			</ul>
+		</div>
+		{% endfor %}
+			{% for skill in resume['tools'] | split_list_two %}
+			<div class="col-md-6">
+				<ul class="no-bullets">
+					<li>
+						<span class="ability-title">{{ skill['title'] }}</span>
+						<span class="ability-score">
+
+							{% set count = namespace(value=0) %}
+							{% for i in range(0, skill['level']) %}
+
+								<span class="glyphicon glyphicon-star filled"></span>
+							  {% set count.value = count.value + 1 %}
+							{% endfor %}
+
+							{% set blankcount = 5 - count.value%}
+							{% for i in range(0, blankcount) %}
+								<span class="glyphicon glyphicon-star"></span>
+							{% endfor %}
+
+						</span>
+					</li>
+				</ul>
+			</div> 
+			{% endfor %}
+		{% else %}
+		
+		<div class="alert alert-warning">
+			No tools were found in this resume
+		</div>
+	{% endif %}
+</div> -->

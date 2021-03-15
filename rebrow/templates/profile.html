@@ -1,0 +1,36 @@
+<h2>Profile</h2>
+<p class="lead">{{ resume['profile']['tagline'] }}</p>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-4">
+		<h3>About me</h3>
+		<p>
+			{{ resume['profile']['biography'] }}
+		</p>
+	</div>
+	<div class="col-md-4 text-center">
+		<img src="{{ url_for('static', filename = 'images/jon_d_kelley.png') }}" alt="Jonathan D Kelley" width="246" height="246" />
+	</div>
+	<div class="col-md-4">
+		<h3>Details</h3>
+		<p>
+			<strong>Name:</strong><br />
+			{{ resume['profile']['first_name'] }} {{ resume['profile']['last_name'] }}<br />
+			<strong>Age:</strong><br />{{ resume['profile']['date_of_birth'] | calculate_age }} years old<br />
+			<strong>Location:</strong><br />
+			{{ resume['profile']['current_location']['city'] }}, {{ resume['profile']['current_location']['state'] }}, {{ resume['profile']['current_location']['country'] }}, {{ resume['profile']['current_location']['planet'] }}
+		</p>
+
+	<div class="text-center project-referal">
+		<p>I built this resume on Python Flask and Jinja2 framework using Twitter Bootstrap. Deployed on Kubernetes.</p>
+		<a href="https://github.com/jondkelley/resume" class="btn btn-primary" target="_blank">See project on Github</a>
+	</div>
+<!-- 		<a href="https://twitter.com/jondkelley" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @jondkelley</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+<!-- 		<script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+		<script type="IN/FollowCompany" data-id="41385925" data-counter="bottom"></script> -->
+	</div>
+</div>

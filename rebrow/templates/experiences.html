@@ -1,0 +1,79 @@
+<h2>Job Experiences</h2>
+<p class="lead">
+	&ldquo;Protons give an atom its identity, electrons its personality.&rdquo;<br />- Bill Bryson, A short history of nearly everything
+</p>
+
+<hr />
+
+<!-- <h3>Educations</h3>
+
+
+<hr /> -->
+
+<h3>Career</h3>
+
+		<!--- https://stackoverflow.com/questions/18325779/bootstrap-3-collapse-show-state-with-chevron-icon --->
+
+
+{% if resume['careers']|length > 0 %}
+<div class="experiences">
+	{% set jobcount = namespace(value=0) %}
+	{% for job in resume['careers'] %}	
+	{% set jobcount.value = jobcount.value + 1 %}
+	<div class="experience row">
+		<div class="col-md-4">
+			<h4>{{ job['title'] }}</h4>
+			<p class="experience-period">
+				{{ job['start_date'] | resume_date }}
+				- 
+				{{ job['end_date'] | resume_date }}
+			</p>
+		</div>
+		<div class="col-md-8">
+			<p>
+				<strong>{{ job['specification'] }}</strong>
+				<span class="hidden-phone">
+					{{ job['description'] }}
+				</span>
+
+				{% if job['accomplishments'] %}
+				 <div class="accordion">
+				        <div class="accorfion-section">
+				            <a class="accordion-section-title" href="#accordion-{{ jobcount.value }}">Expand Accomplishments</a>
+				            <div id="accordion-{{ jobcount.value }}" class="accordion-section-content">
+								<ul>
+								{% for bullet in job['accomplishments'] %}	
+								  <li>{{ bullet }}</li>
+								{% endfor %}
+								</ul>
+				            </div>
+				        </div>
+				 </div>
+				{% endif %}
+
+				<span class="experience-details">
+					<span class="location">
+						<span class="glyphicon glyphicon-map-marker"></span>
+						{{ job['location'] }}
+					</span>
+				</span>
+				{% if job['link'] %}
+				<span class="seperator">|</span>
+				<span class="link">
+					<span class="glyphicon glyphicon-link"></span>
+					<a href="{{ job['link'] }}" target="_blank">{{ job['link'] }}</a>
+				</span>
+				
+				{% endif %}
+				
+			</p>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% else %}
+<div class="alert alert-warning">
+	No careers were found in this resume
+</div>
+{% endif %}
+
