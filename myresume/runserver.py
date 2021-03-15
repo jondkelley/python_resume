@@ -2,9 +2,9 @@
 
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json
 from myresume.blueprints.resume import myresume
+from myresume.sharedlib.jinja2 import split_list_one, split_list_two, reverse_string, resume_date, calculate_age
 import os
 import base64
-import datetime
 
 app = Flask(__name__)
 
@@ -23,50 +23,30 @@ def urlsafe_base64_encode(s):
     return Markup(s.decode("utf8"))
 
 @app.template_filter('split_list_one')
-def split_list_one(a_list):
-    """ takes a list and returns the first half """
-    half = len(a_list)//2
-    return a_list[:half]
+def app_split_list_one(a_list):
+    return split_list_one(a_list)
 
 @app.template_filter('split_list_two')
-def split_list_two(a_list):
+def app_split_list_two(b_list):
     """ takes a list and returns the second half """
-    half = len(a_list)//2
-    return a_list[half:]
+    return split_list_two(b_list)
 
 @app.template_filter('revstr')
-def reverse_string(s):
+def app_reverse_string(s):
 	"""
 	reversed a text string, I'm using this to prevent spam with email addresses or phone
 	"""
-	return s[::-1]
+	return reverse_string(s)
 
 @app.template_filter('resume_date')
-def resume_date(strtime):
+def app_resume_date(strtime):
     """ cast a date like 2020-03-01 for the resume to March 2020"""
-    if not strtime:
-        return 'current'
-    datetime_object = datetime.datetime.strptime(strtime, '%Y-%m-%d')
-    return f'{datetime_object:%B %Y}'
+    return resume_date(strtime)
 
 @app.template_filter('calculate_age')
-def calculate_age(born):
+def app_calculate_age(born):
     """ convert a date like 2020-03-01 into the number of days passed until today """
-    born = datetime.date(int(born.split('-')[0]), int(born.split('-')[1]), int(born.split('-')[2]))
-    today = datetime.date.today() 
-    try:  
-        birthday = born.replace(year = today.year) 
-  
-    # raised when birth date is February 29 
-    # and the current year is not a leap year 
-    except ValueError:  
-        birthday = born.replace(year = today.year, 
-                  month = born.month + 1, day = 1) 
-  
-    if birthday > today: 
-        return today.year - born.year - 1
-    else:
-        return today.year - born.year 
+    return calculate_age(born)
 
 @app.errorhandler(404)
 def page_not_found(e):

@@ -8,6 +8,7 @@ services:
       - 5001:5001
     volumes:
       - ./resume.json:/resume.json
+      - ./resume.md.jinja2:/resume.md.jinja2
     restart: always
     networks:
       - resume_net
