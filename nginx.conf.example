@@ -54,9 +54,10 @@ http {
         location = /50x.html {
         }
 
-    if ($host != $server_name) {
-        rewrite ^ $scheme://$server_name$request_uri permanent;
-    }
+        # Permanently redirect www subdomain requests to the root domain
+        if ($host != $server_name) {
+          rewrite ^ $scheme://$server_name$request_uri permanent;
+        }
 
     listen [::]:443 ssl ipv6only=on; # managed by Certbot
     listen 443 ssl; # managed by Certbot
