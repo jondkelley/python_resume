@@ -66,7 +66,7 @@
       "specification": "Devops Engineer",
       "location": "San Francisco Bay Area",
       "level": "Full Time",
-      "description": "Managed a rapidly growing real-estate SaaS platform with over 10,000 real estate brokers pages deployed through Wordpress.",
+      "description": "Worked in a cross-discipline devops team managing everything from Kubernetes via terraform infrastructure-as-code to Chef on ec2 instances. Used best security practices in a strict HIPAA environment with segmented networks and RBAC/IAM policies on AWS.",
       "accomplishments": [
         "Built ansible/terraform based deployment system for Kubernetes and Istio onto EKS so the entire Doximity platform could be migrated.",
         "Moved Jenkins jobs from traditional EC2 swarm builders over to ECS based pipelines for better resource utilization / cost saving.",
