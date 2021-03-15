@@ -20,6 +20,13 @@ def login():
     """
     return render_template('index.html', resume=resume)
 
+@myresume.route("/terminal", methods=['GET', 'POST'])
+def term():
+    """
+    Terminal
+    """
+    return render_template('term.html')
+
 @myresume.route("/resume.json", methods=['GET', 'POST'])
 def resume_json():
     """
