@@ -1,14 +1,9 @@
 # encoding: utf8
 
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json
-import redis
-import time
-from datetime import datetime, timedelta
-from json import loads as json_loads
+from myresume.blueprints.resume import myresume
 import os
 import base64
-
-from rebrow.blueprints.rebrow import rebrow
 import datetime
 
 app = Flask(__name__)
@@ -17,7 +12,7 @@ app = Flask(__name__)
 app.secret_key = os.getenv(
     "SECRET_KEY", "lasfuoi3ro8w7gfow3bwiubdwoeg7p23r8g23rg")
 
-app.register_blueprint(rebrow)
+app.register_blueprint(myresume)
 
 
 @app.template_filter('urlsafe_base64')

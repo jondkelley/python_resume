@@ -13,4 +13,4 @@ WORKDIR /app
 RUN python3 setup.py install
 
 EXPOSE 5001
-ENTRYPOINT ["rebrow"]
+ENTRYPOINT ["myresume"]

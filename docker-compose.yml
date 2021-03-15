@@ -7,7 +7,7 @@ services:
     ports:
       - 5001:5001
     volumes:
-      - ./rebrow/resume.json:/resume.json
+      - ./myresume/resume.json:/resume.json
     restart: always
     networks:
       - resume_net
