@@ -58,5 +58,5 @@ This Resume was inspired by a PHP driven dynamic resume created by designer **Pa
 I ported his PHP / Laravel code straight over to Python / Flask / Jinja2 and made changes to suit my needs.
 Finally I dockerized this project for Kubernetes deployment.
 
-# http://pascalvangemert.nl/
-# https://github.com/pascalvgemert/resume
+* http://pascalvangemert.nl/
+* https://github.com/pascalvgemert/resume
