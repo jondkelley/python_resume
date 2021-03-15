@@ -15,6 +15,7 @@
 ----------
 {%- for job in resume['careers'] %}	
 **{{ job['title'] }}**
+
 {{ job['start_date'] | resume_date }} - {{ job['end_date'] | resume_date }}
 {{ job['specification'] }}
 {% if job['accomplishments'] -%}
