@@ -45,18 +45,9 @@ Then access resume via `http://<your-docker-ip>:5001/` and set the host name in 
 
 * 2020 Jonathan Kelley
 
-## License
+## Inspiration
 
-Copyleft, but please buy me a beer if you use this code for your own self-promotion.
+This Resume was inspired by an interctive dynamic resume created by designer **[Pascal Van Gemert](http://pascalvangemert.nl/)** and written in [PHP / Laravel / bootstrap3 code](https://github.com/pascalvgemert/resume).
 
-Paypal: jonkelley@gmail.com
-
-## Inspired by
-
-This Resume was inspired by a PHP driven dynamic resume created by designer **Pascal Van Gemert**.
-
-I ported his PHP / Laravel code straight over to Python / Flask / Jinja2 and made changes to suit my needs.
-Finally I dockerized this project for Kubernetes deployment.
-
-* http://pascalvangemert.nl/
-* https://github.com/pascalvgemert/resume
+I ported this framework over to Python / Flask / Jinja2 since this is my domain strong suit. I made a few changes along the way as well as dockerizing this project for Kubernetes. Hooray. I also bought him some beer for the great idea and concept.
+ 
