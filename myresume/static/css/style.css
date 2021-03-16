@@ -313,15 +313,15 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 
 @keyframes wiggle {
   0% {
-    padding-top: 20px;
+    padding-top: 15px;
   }
 
   50% {
-    padding-top: 28px;
+    padding-top: 38px;
   }
 
   100% {
-    padding-top: 20px;
+    padding-top: 15px;
   }
 }
 
