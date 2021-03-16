@@ -42,7 +42,16 @@ http {
         # Load configuration files for the default server block.
         include /etc/nginx/default.d/*.conf;
 
+        # Add some vanity headers for fun
+        add_header X-hire-me 'you need my l33t skillz';
+        add_header X-powered-by 'kubernetes';
+
+        # Allow static content; else use the proxy
         location / {
+          try_files $uri $uri/index.html @proxy;
+        }
+
+        location @proxy {
           proxy_pass http://localhost:5001;
         }
 
