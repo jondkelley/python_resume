@@ -19,7 +19,7 @@ def reverse_string(s):
 def resume_date(strtime):
     """ cast a date like 2020-03-01 for the resume to March 2020"""
     if not strtime:
-        return 'current'
+        return 'Current'
     datetime_object = datetime.datetime.strptime(strtime, '%Y-%m-%d')
     return f'{datetime_object:%B %Y}'
 
