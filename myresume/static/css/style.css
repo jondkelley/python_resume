@@ -234,6 +234,14 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
   z-index:99999;
 }
 
+.tex-icon {
+  position:absolute;
+  top:140px;
+  left:5px;
+  z-index:99999;
+}
+
+
 
 @media (max-width: 1200px) { 
   #interests .interest-content { padding: 20px 0px; }
