@@ -215,24 +215,115 @@
       "end_date": "2006-07-01"
     }
   ],
+  "skills_hypervisors": [
+    {
+      "title": "AWS ec2",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "XenServer",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "VMWare ESXSI",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "KVM",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Openstack",
+      "level": 5,
+      "endorsement": ""
+    }
+  ],
+  "skills_devops_tools": [
+    {
+      "title": "Terraform/HCL",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "docker-compose",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Vagrant",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Puppet",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "SaltStack",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "Chef",
+      "level": 3,
+      "endorsement": ""
+    }
+  ],
+  "skills_ci_cd": [
+    {
+      "title": "Jenkins",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Bamboo",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "Teamcity",
+      "level": 4,
+      "endorsement": ""
+    },
+    {
+      "title": "CircleCI",
+      "level": 3,
+      "endorsement": ""
+    },
+    {
+      "title": "Github Actions",
+      "level": 2,
+      "endorsement": ""
+    },
+    {
+      "title": "Gitlab",
+      "level": 2,
+      "endorsement": ""
+    }
+  ],
   "skills": [
+    {
+      "title": "Python",
+      "level": 4,
+      "endorsement": ""
+    },
     {
       "title": "Ansible",
       "level": 5,
       "endorsement": ""
     },
     {
-      "title": "BASH",
+      "title": "Kubernetes",
       "level": 5,
       "endorsement": ""
     },
     {
       "title": "REST Frameworks",
-      "level": 5,
-      "endorsement": ""
-    },
-    {
-      "title": "Jenkins",
       "level": 5,
       "endorsement": ""
     },
@@ -247,32 +338,12 @@
       "endorsement": ""
     },
     {
-      "title": "TeamCity",
-      "level": 5,
-      "endorsement": ""
-    },
-    {
-      "title": "CircleCI",
-      "level": 5,
-      "endorsement": ""
-    },
-    {
-      "title": "Bamboo",
-      "level": 5,
-      "endorsement": ""
-    },
-    {
       "title": "Observium",
       "level": 5,
       "endorsement": ""
     },
     {
       "title": "MongoDB",
-      "level": 5,
-      "endorsement": ""
-    },
-    {
-      "title": "DNS",
       "level": 5,
       "endorsement": ""
     },
@@ -327,22 +398,22 @@
       "endorsement": ""
     },
     {
+      "title": "SMTP",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
+      "title": "DNS",
+      "level": 5,
+      "endorsement": ""
+    },
+    {
       "title": "Wordpress",
       "level": 5,
       "endorsement": ""
     },
     {
-      "title": "Terraform",
-      "level": 5,
-      "endorsement": ""
-    },
-    {
       "title": "Git (SCM)",
-      "level": 4,
-      "endorsement": ""
-    },
-    {
-      "title": "Python",
       "level": 4,
       "endorsement": ""
     },
@@ -358,11 +429,6 @@
     },
     {
       "title": "Tomcat",
-      "level": 4,
-      "endorsement": ""
-    },
-    {
-      "title": "Kubernetes",
       "level": 4,
       "endorsement": ""
     },
@@ -383,16 +449,6 @@
     },
     {
       "title": "Networking",
-      "level": 4,
-      "endorsement": ""
-    },
-    {
-      "title": "SaltStack",
-      "level": 4,
-      "endorsement": ""
-    },
-    {
-      "title": "Chef",
       "level": 4,
       "endorsement": ""
     },
@@ -454,8 +510,8 @@
   "projects": [
     {
       "title": "python_resume",
-      "description": "Just another example of the power behind Flask / Jinja2 and Twitter Bootstrap.",
-      "tagline": "This resume's backend!",
+      "description": "A showcase of Python/Flask/Jinja2/HTML(5)/Bootstrap/JQuery used to both generate jon-kelley.com and my hardcopy resume.",
+      "tagline": "The backend code for this website!",
       "tags": "Python, Flask, Bootstrap, Jinja2, Resume",
       "link": "https://github.com/jondkelley/python_resume"
     },
@@ -472,6 +528,13 @@
       "tagline": "Redis \"workbench\" style tool in Python/Flask.",
       "tags": "Python, Flask, Bootstrap, Redis",
       "link": "https://github.com/jondkelley/rebrow-modernized"
+    },
+    {
+      "title": "carphunter",
+      "description": "Simple tool to locate Cisco IP/ARP and display results. Useful for small to medium datacenters (1-100 network devices)",
+      "tagline": "A ARP cache tool for multi-device CISCO newtorks and search tool.",
+      "tags": "Python, Flask, Bootstrap, Redis",
+      "link": "https://github.com/jondkelley/carphunter"
     },
     {
       "title": "zabbix_api_monitor",
