@@ -489,7 +489,7 @@
     },
     {
       "title": "testVapi",
-      "description": "Based on the python behave features this project emulates a cucumber style syntax to run HTTP API tests and is able to forward the messages to ELK stack. This uses a langage called Gherkin to make plain-english QA testing a breeze.",
+      "description": "Based on the python behave features this project emulates a cucumber style syntax to run HTTP API tests and is able to forward the messages to ELK stack. This uses a language called Gherkin to make plain-english QA testing a breeze.",
       "tagline": "Creative python suite which runs QA tests using plain English syntax.",
       "tags": "Python, Elk, Behave, Cucumber, Gherkin",
       "link": "https://github.com/jonkelleyatrackspace/testvapi"
