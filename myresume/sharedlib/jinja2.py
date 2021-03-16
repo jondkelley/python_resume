@@ -1,5 +1,7 @@
 import datetime
 
+# Custom jinja2 filters
+
 def split_list_one(a_list):
     """ takes a list and returns the first half """
     half = len(a_list)//2
@@ -39,4 +41,4 @@ def calculate_age(born):
     if birthday > today: 
         return today.year - born.year - 1
     else:
-        return today.year - born.year 
+        return today.year - born.year
