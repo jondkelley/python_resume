@@ -40,7 +40,7 @@
   "careers": [
     {
       "title": "LogDNA",
-      "specification": "Sr Cloud Support Engineer",
+      "specification": "Sr. Cloud Support Engineer",
       "location": "San Francisco Bay Area",
       "level": "Full Time",
       "description": "Works on the support team supporting a myriad of log ingestion configurations as well as helping the SRE team during incidents.",
@@ -57,7 +57,7 @@
         "Helps take senior escalations for k8s agent, logstash, IBM Cloudfoundry, logspout and other products.",
         "Assists the production SRE team during incidents and outages with generalized investigation of k8s stack / node failures on IBM and helps act as a technical liaison to IBM incident managers."
       ],
-      "start_date": "2019-06-01",
+      "start_date": "2020-06-01",
       "end_date": null,
       "link": "http://logdna.com"
     },
@@ -84,7 +84,7 @@
       "specification": "Devops Engineer / Site Reliability Engineer",
       "location": "Charleston, SC",
       "level": "Full Time",
-      "description": "Managed a rapidly growing real-estate SaaS platform with over 10,000 real estate brokers pages deployed through Wordpress.",
+      "description": "Managed a rapidly growing real estate SaaS platform with over 10,000 agent brokers deployed through Wordpress.",
       "accomplishments": [
         "Subject matter expert and mentor for Linux applications and platform tools.",
         "Re-tooled container stack for frontend Wordpress product from 5 year old shell magic to docker-compose v3 + python-paver build process (for gulp/yarn/phpunit)",
@@ -104,7 +104,7 @@
       "specification": "Linux Systems Engineer II",
       "location": "Dallas, TX",
       "level": "Full Time",
-      "description": "Worked with the Cloud Integrations Team / Rackspace Internal Tools Engineering team.",
+      "description": "Worked with the Cloud Integrations Team / Rackspace Internal Tools Engineering team. Supported internal billing, cloud identity systems, and internal Rackertools.",
       "accomplishments": [
         "Migrated tooling from Puppet2 to Puppet3 with PuppetDB, Hiera, puppetserver, directory environments and wrote a tool to wrap r10k. Security compliant PuppetDB database security model. This reduces complexity and applies patterns we were missing previously.",
         "Maintains Ansible modules that allow us to store firewall configurations in git. Built a release pipeline to deploy on git push. This builds a \"working documentation\" and a git log to make instant rollbacks a snap in production environments.",
@@ -122,7 +122,7 @@
       "specification": "Linux Systems Engineer I",
       "location": "Dallas, TX",
       "level": "Full Time",
-      "description": "Worked with the Cloud Integrations Team / Rackspace Internal Tools Engineering team.",
+      "description": "Worked with the Cloud Integrations Team / Rackspace Internal Tools Engineering team. Supported internal billing, cloud identity systems, and internal Rackertools.",
       "accomplishments": [
         "Built continuous integration in Jenkins for 5 new products using a python API we wrote to trigger builds on a build server and cycling app deployments.",
         "Wrote python SDK for build system platform and deployment system so developers can hook, deploy and release 4 products via REST api from python CLI or jenkins or virtually anything.",
@@ -141,7 +141,7 @@
       "specification": "Linux Systems Administrator III",
       "location": "Dallas, TX",
       "level": "Full Time",
-      "description": "Worked on the openstack / cloud servers team managing the customer facing control panel systems.",
+      "description": "Worked on the openstack / cloud servers as a systems administrator supporting the Rackspace Cloud Control panel and backend systems.",
       "accomplishments": [
         "Works closely with Cloud integration teams running deployment and maintenance on large-scale backend infastructure used for the world's 2nd largest Public Cloud.",
         "7+ years hands-on experience with Linux (Redhat/Debian)",
@@ -167,7 +167,7 @@
       "specification": "Embedded Device Support Engineer II",
       "location": "Dallas, TX",
       "level": "Full Time",
-      "description": "Managed on-premise and SaaS based solution for HIPAA encryption. Supported Java Tomcat application as well as Postfix mail system. Managed network security policies and on-premise datacenter networks.",
+      "description": "Supported on-premise and SaaS cloud-hosted solution for HIPAA encryption. Supported Java Tomcat application as well as Postfix mail system. Managed network security policies and on-premise datacenter networks.",
       "accomplishments": [
         "Worked in a HIPAA compliant environment dealing with personal data e-mail encryption with well-recognized companies and government agencies.",
         "Worked in accordance with UK data privacy and export laws in accordance to mail administration.",
@@ -184,7 +184,7 @@
       "specification": "Linux Administrator II",
       "location": "Dallas, TX",
       "level": "Full Time",
-      "description": "Performed Linux technical support by phone / tickets. Did professional service migrations, hardware upgrades, cabinet wiring, and performed network maintenence in the datacenter on Cisco Catalyst 6500 series hardware.",
+      "description": "Performed Linux technical support by phone / tickets. Did professional service migrations, hardware upgrades, cabinet wiring, and performed network maintenence in the datacenter on Cisco Catalyst 6500 series hardware. Supported Cpanel and Flesk control panels.",
       "accomplishments": [
         "Performed phone and ticket work to meet customer SLA.",
         "Managed OS patching, migrations, and upgrades as professional services to customers.",
