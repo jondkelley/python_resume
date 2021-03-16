@@ -47,34 +47,27 @@ def generate_markdown():
     return markdown
 
 
+@myresume.route("/resume.md/")
 @myresume.route("/resume.md")
 def resume_markdown():
     """
-    generates a rendered markdown document from resume
+    generates a raw markdown document from resume
     """
-    theme = request.args.get('theme', 'markdown3')
-    render = request.args.get('render', False)
-    if not render:
-        response = make_response(generate_markdown(), 200)
-        response.mimetype = "text/plain"
-        return response
-    else:
-        html_body = markdown.markdown(generate_markdown(), extensions=[
-                                      'fenced_code', 'codehilite'])
-        stylesheet = f'<link rel="stylesheet" href="/static/css/markdown/{theme}.css"/>'
-        return f'{stylesheet}\n\n{html_body}'
+    response = make_response(generate_markdown(), 200)
+    response.mimetype = "text/plain"
+    return response
 
 
-@myresume.route("/resume.pdf")
-def resume_pdf():
+@myresume.route("/resume.md/render/theme/<theme>")
+@myresume.route("/resume.md/render/<theme>")
+@myresume.route("/resume.md/render")
+def resume_markdown_theme(theme='3'):
     """
-    generates a rendered PDF file from a markdown base
+    generates a rendered markdown document from resume theme
     """
-    theme = request.args.get('theme', 'markdown3')
-    render = request.args.get('render', False)
     html_body = markdown.markdown(generate_markdown(), extensions=[
                                   'fenced_code', 'codehilite'])
-    stylesheet = f'<link rel="stylesheet" href="/static/css/markdown/{theme}.css"/>'
+    stylesheet = f'<link rel="stylesheet" href="/static/css/markdown/markdown{theme}.css"/>'
     return f'{stylesheet}\n\n{html_body}'
 
 
