@@ -1,8 +1,29 @@
-Resume - Jonathan D Kelley
+Resume - Jonathan D Kelley - jon-kelley.com
 =====================================================
 
-I wrote this code to serve as an interactive resume on my website [jon-kelley.com](https://jon-kelley.com).
-This is designed to run on Kubernetes and runs in a Python3 container.
+This Git repository serves two purposes:
+
+* A) to render my resume in HTML(5) / Bootstrap / Markdown / PDF / DOCX
+* B) to showcase my skills as a "Devops Engineer" by building this piece of engineering.
+
+##### The showcase.
+
+Browse this repository to see my skills in Python, Flask, Markdown, and file conversions as well as my resume itself. This also builds cleanly into a `Dockerfile` and can be deployed via `docker-compose` and Kubernetes! This code could be better at mimicking an MIT graduate, but hey I wrote the bulk of this on a Sunday afternoon. C'mon!
+
+##### My resume.
+
+See the interactive live version of this [Jon-Kelley.com](https://jon-kelley.com) powered by Kubernetes!
+
+##### The premise for this project.
+
+I wrote this because I was tired of directly maintaining a markdown resume and converting it to DOCX/PDF for recruiters. I figured why not build something that makes my life easier -- the same reason Devops models exist in the firts place?
+
+
+##### The architecture
+
+A simplified component diagram of this architecture is below which should give you an idea of how the codebase works, even if you're not technical.
+
+![](conceptual_architecture_small.jpg)
 
 ## Quick Start
 
@@ -18,6 +39,8 @@ Execute this:
 Then open [127.0.0.1:5001](http://127.0.0.1:5001).
 
 ## Running in docker-compose
+
+This is how I prefer to develop my Docker projects.
 
 If you have docker-compose installed, you can simply run
 
