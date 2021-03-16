@@ -198,10 +198,25 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 	background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award.png') no-repeat;
 }
 
+.json-icon {
+  position:absolute;
+  top:28px;
+  left:0px;
+  z-index:99999;
+}
+
+.json-icon a {
+  width:73px;
+  height:73px;
+  text-indent:-9999px;
+  display:block;
+  background:url('/static/images/icon_json_sm.png') no-repeat;
+}
+
 .markdown-icon {
   position:absolute;
-  top:100px;
-  left:0px;
+  top:122px;
+  left:7px;
   z-index:99999;
 }
 
