@@ -4,6 +4,15 @@
 
 import datetime
 
+# Custom jinja2 globals
+
+
+def get_current_datetime():
+    utc_timestamp = datetime.datetime.utcnow()
+
+    return f'{utc_timestamp} (UTC)'
+
+
 # Custom jinja2 filters
 
 
