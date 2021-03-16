@@ -13,6 +13,7 @@ from myresume.sharedlib.jinja2 import resume_date as filter_resume_date
 import jinja2
 import markdown
 import markdown.extensions.fenced_code
+from uuid import uuid4
 
 myresume = Blueprint('myresume', __name__)
 
@@ -43,7 +44,7 @@ def generate_markdown():
     jinja2.filters.FILTERS['resume_date'] = filter_resume_date
     env = jinja2.Environment(loader=jinja2.FileSystemLoader("/"))
     template = env.get_template("resume.md.jinja2")
-    markdown = template.render(resume=resume, current_timestamp_utc=get_current_datetime())
+    markdown = template.render(resume=resume, current_timestamp_utc=get_current_datetime(), uuid=uuid4())
     return markdown
 
 
