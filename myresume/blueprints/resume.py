@@ -59,7 +59,6 @@ def resume_markdown():
 
 
 @myresume.route("/resume.md/render/theme/<theme>")
-@myresume.route("/resume.md/render/<theme>")
 @myresume.route("/resume.md/render")
 def resume_markdown_theme(theme='3'):
     """
@@ -68,7 +67,9 @@ def resume_markdown_theme(theme='3'):
     html_body = markdown.markdown(generate_markdown(), extensions=[
                                   'fenced_code', 'codehilite'])
     stylesheet = f'<link rel="stylesheet" href="/static/css/markdown/markdown{theme}.css"/>'
-    return f'{stylesheet}\n\n{html_body}'
+    header = f"<head><title>⭐{resume['profile']['first_name']} {resume['profile']['last_name']} Resume - Markdown Render</title>{stylesheet}</head>"
+    preface = '<p><strong><em>Click <a href="/resume.md/">here</a> for raw markdown.</em></strong></p>'
+    return f'{header}\n\n{preface}{html_body}'
 
 
 @myresume.route("/resume.json", methods=['GET', 'POST'])
