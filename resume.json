@@ -132,8 +132,8 @@
         "Handling deployment and design considerations for next-gen architecture replacing legacy internal controls design from serial to fully async process with a service backend layer to connect to backends/dbs/apis. The next gen is Python 3/Tornado with Angular.js web frontends. This is to replace a traditionally monolithic serial threaded Ruby 1.8.7 application on Phusion Passenger which bundled business logic and just couldn't scale.",
         "Seeing weakpoints in ops/qe tests I have written BDD Gherkin style templates in pyhon using \"behave\" to test any API that is REST. Could be extremely helpful for ops or QA functional end to end testing. It's in my projects section called testvAPI."
       ],
-      "start_date": "2010-02-01",
-      "end_date": "2011-03-01",
+      "start_date": "2013-04-01",
+      "end_date": "2014-08-01",
       "link": "http://rackspace.com"
     },
     {
