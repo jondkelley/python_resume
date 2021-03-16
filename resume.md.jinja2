@@ -8,7 +8,6 @@
 >
 > Website: [{{ resume['contact_details']['website'] }}]({{ resume['contact_details']['website'] }})
 >
->
 > LinkedIn: [{{ resume['contact_details']['linkedin'] }}]({{ resume['contact_details']['linkedin'] }})
 >
 > Keybase Proof: [{{ resume['contact_details']['keybase'] }}]({{ resume['contact_details']['keybase'] }})
@@ -18,7 +17,7 @@
 
 ----------
 
-{%- for job in resume['careers'] %}	
+{% for job in resume['careers'] %}	
 **{{ job['title'] }}** ({{ job['specification'] }})
 
 {{ job['start_date'] | resume_date }} - {{ job['end_date'] | resume_date }}
