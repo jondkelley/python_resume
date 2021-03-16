@@ -23,7 +23,7 @@ if __name__ == "__main__":
         include_package_data=True,
         package_dir={NAME: NAME},
         description="rebrow - Interactie online resume",
-        install_requires=['Flask==1.1.0', 'markdown', 'markdown', 'htmldocx'],
+        install_requires=['markdown', 'Flask==1.1.0'],
         entry_points={
             'console_scripts': ['myresume = myresume.runserver:main'],
         },
