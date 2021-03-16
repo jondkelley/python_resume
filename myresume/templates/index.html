@@ -91,7 +91,8 @@
 		<div id="top" class="jumbotron" data-src="<?= $current_header['source']; ?>" data-position="<?= $current_header['position']; ?>"> -->
 		<div id="top" class="jumbotron" style="height: 100vh;" data-src="/static/images/birthday_animation.gif" data-position="center center">
 			<div class="container">
-				<h1>{{ resume['profile']['first_name'] }} {{ resume['profile']['middle_name'] }} {{ resume['profile']['last_name'] }}</h1>
+
+				<h1 class="glitch" data-text="{{ resume['profile']['first_name'] }} {{ resume['profile']['middle_name'] }} {{ resume['profile']['last_name'] }}">{{ resume['profile']['first_name'] }} {{ resume['profile']['middle_name'] }} {{ resume['profile']['last_name'] }}</h1>
 				<p class="lead">Resume &amp; Portfolio</p>
 			</div>
 			
