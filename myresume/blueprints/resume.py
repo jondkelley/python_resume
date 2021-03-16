@@ -16,6 +16,13 @@ myresume = Blueprint('myresume', __name__)
 with open('/resume.json', 'r') as outfile:
     resume = json_load(outfile)
 
+def generate_markdown():
+    jinja2.filters.FILTERS['resume_date'] = filter_resume_date
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader("/"))
+    template = env.get_template("resume.md.jinja2")
+    markdown = template.render(resume=resume)
+    return markdown
+
 @myresume.route("/", methods=['GET', 'POST'])
 def login():
     """
@@ -31,17 +38,22 @@ def term():
     return render_template('term.html')
 
 @myresume.route("/resume.md")
-def markdown_generator():
+def serve_markdown():
     """
     generates a rendered markdown document from resume
     """
-    jinja2.filters.FILTERS['resume_date'] = filter_resume_date
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader("/"))
-    template = env.get_template("resume.md.jinja2")
-
-    response = make_response(template.render(resume=resume), 200)
+    markdown = generate_markdown()
+    response = make_response(markdown, 200)
     response.mimetype = "text/plain"
     return response
+
+@myresume.route("/resume.md/render")
+def serve_markdown_rendered():
+    """
+    generate rendered markdown
+    """
+    html = markdown.markdown(generate_markdown(), extensions=['fenced_code', 'codehilite'])
+    return html
 
 @myresume.route("/resume.json", methods=['GET', 'POST'])
 def resume_json():
