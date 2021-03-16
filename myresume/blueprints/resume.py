@@ -5,9 +5,9 @@
 from flask import Blueprint, request
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json, make_response
 from flask import current_app as app
-from flask import jsonify
 from flask import render_template, redirect, url_for
 from json import load as json_load
+from json import dumps as json_dumps
 from myresume.sharedlib.jinja2 import get_current_datetime
 from myresume.sharedlib.jinja2 import resume_date as filter_resume_date
 import jinja2
@@ -78,4 +78,7 @@ def resume_json():
     """
     Return resume in pretty JSON
     """
-    return jsonify(resume)
+    print(resume)
+    json = app.make_response(json_dumps(resume, indent=5))
+    json.mimetype = "text/plain"
+    return json
