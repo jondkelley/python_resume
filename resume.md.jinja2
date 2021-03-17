@@ -18,11 +18,11 @@
 ----------
 
 {% for job in resume['careers'] %}	
-**{{ job['title'] }}** ({{ job['specification'] }})
+[¶](https://jon-kelley.com/#{{ job['title'] | lower | make_slug + '-' + job['specification'] | lower | make_slug }}) **{{ job['title'] }}** ({{ job['specification'] }})
 
 {{ job['start_date'] | resume_date }} - {{ job['end_date'] | resume_date }}
 {% if job['accomplishments'] -%}
-{%- for bullet in job['accomplishments'] %}
+{%- for bullet in job['accomplishments'][:3] %}
 * {{ bullet}}
 {% endfor -%}
 {%- endif -%}

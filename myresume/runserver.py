@@ -4,7 +4,7 @@
 
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json
 from myresume.blueprints.resume import myresume
-from myresume.sharedlib.jinja2 import split_list_one, split_list_two, reverse_string, resume_date, calculate_age
+from myresume.sharedlib.jinja2 import split_list_one, split_list_two, reverse_string, resume_date, calculate_age, make_slug
 import base64
 import os
 
@@ -54,6 +54,11 @@ def app_resume_date(strtime):
 def app_calculate_age(born):
     """ convert a date like 2020-03-01 into the number of days passed until today """
     return calculate_age(born)
+
+
+@app.template_filter('make_slug')
+def app_make_slug(text):
+    return make_slug(text)
 
 
 @app.errorhandler(404)

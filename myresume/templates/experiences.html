@@ -17,7 +17,7 @@
 	{%- set jobcount.value = jobcount.value + 1 -%}
 	<div class="experience row">
 		<div class="col-md-4">
-			<h4>{{ job['title'] }}</h4>
+			<h4 id="{{ job['title'] | lower | make_slug + '-' + job['specification'] | lower | make_slug }}">{{ job['title'] }}</h4>
 			<p class="experience-period">
 				{{ job['start_date'] | resume_date }}
 				- 
@@ -26,7 +26,7 @@
 		</div>
 		<div class="col-md-8">
 			<p>
-				<strong>{{ job['specification'] }}</strong>
+				<strong><a class="pilcrow" href="#{{ job['title'] | lower | make_slug + '-' + job['specification'] | lower | make_slug }}">¶</a> {{ job['specification'] }}</strong>
 				<span class="hidden-phone">
 					{{ job['description'] }}
 				</span>

@@ -10,6 +10,7 @@ from json import load as json_load
 from json import dumps as json_dumps
 from myresume.sharedlib.jinja2 import get_current_datetime
 from myresume.sharedlib.jinja2 import resume_date as filter_resume_date
+from myresume.sharedlib.jinja2 import make_slug as filter_make_slug
 import jinja2
 import markdown
 import markdown.extensions.fenced_code
@@ -42,6 +43,7 @@ def generate_markdown():
     generate resume in markdown format
     """
     jinja2.filters.FILTERS['resume_date'] = filter_resume_date
+    jinja2.filters.FILTERS['make_slug'] = filter_make_slug
     env = jinja2.Environment(loader=jinja2.FileSystemLoader("/"))
     template = env.get_template("resume.md.jinja2")
     markdown = template.render(resume=resume, current_timestamp_utc=get_current_datetime(), uuid=uuid4())
