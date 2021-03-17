@@ -615,13 +615,15 @@ figure.effect:hover p {
 }
 .accordion-section-title.active
 {
-    background-color:#12615e;
+    background-color:#0d807c;
     text-decoration:none;
-    }
-    .accordion-section-title:hover
-    {
-    background-color:grey;
+    color: #fff;
+}
+.accordion-section-title:hover
+{
+    background-color: #115957;
     text-decoration:none;
+    color: #fff;
 }
 .accordion-section:last-child .accordion-section-title
 {
