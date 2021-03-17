@@ -1,3 +1,4 @@
+<a class="pilcrow-section" href="#experiences">¶</a>
 <h2>Job Experiences</h2>
 <p class="lead">
 	&ldquo;Protons give an atom its identity, electrons its personality.&rdquo;<br />- Bill Bryson, A short history of nearly everything
@@ -26,7 +27,7 @@
 		</div>
 		<div class="col-md-8">
 			<p>
-				<strong><a class="pilcrow" href="#{{ job['title'] | lower | make_slug + '-' + job['specification'] | lower | make_slug }}">¶</a> {{ job['specification'] }}</strong>
+				<strong><a class="pilcrow-experience" href="#{{ job['title'] | lower | make_slug + '-' + job['specification'] | lower | make_slug }}">¶</a> {{ job['specification'] }}</strong>
 				<span class="hidden-phone">
 					{{ job['description'] }}
 				</span>

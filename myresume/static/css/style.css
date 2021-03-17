@@ -330,10 +330,17 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 /***** ANCHOR LINK *****/
 /*---------------*/
 
-a.pilcrow:link { color: black; text-decoration: none; font-weight: normal; }
-a.pilcrow:visited { color: black; text-decoration: none; font-weight: normal; }
-a.pilcrow:hover { color: black; text-decoration: underline; font-weight: bold; }
-a.pilcrow:active { color: black; text-decoration: underline; font-weight: normal; }
+/* Resume job anchor links */
+a.pilcrow-experience:link { color: #8f8f8f; text-decoration: none; font-weight: normal; }
+a.pilcrow-experience:visited { color: #8f8f8f; text-decoration: none; font-weight: normal; }
+a.pilcrow-experience:hover { color: #8f8f8f; text-decoration: underline; font-weight: bold; }
+a.pilcrow-experience:active { color: #8f8f8f; text-decoration: underline; font-weight: normal; }
+
+/* The section pilcrow links */
+a.pilcrow-section:link { color: #8f8f8f; text-decoration: none; font-weight: normal; font-size: 28px;}
+a.pilcrow-section:visited { color: #8f8f8f; text-decoration: none; font-weight: normal; font-size: 28px;}
+a.pilcrow-section:hover { color: #8f8f8f; text-decoration: underline; font-weight: bold; font-size: 28px; }
+a.pilcrow-section:active { color: #8f8f8f; text-decoration: underline; font-weight: normal; font-size: 28px; }
 
 /*---------------*/
 /***** EFFECT *****/
