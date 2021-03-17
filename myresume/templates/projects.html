@@ -5,9 +5,9 @@
 
 <hr />
 
-{% if resume['projects']|length > 0 %}
+{%- if resume['projects']|length > 0 -%}
 <div class="projects">
-	{% for project in resume['projects'] %}	
+	{%- for project in resume['projects'] -%}	
 	<div class="projects row">
 		<div class="col-md-4">
 			<h4>{{ project['title'] }}</h4>
@@ -16,10 +16,9 @@
 		</div>
 		<div class="col-md-8">
 			<p>
-				
-				{% if project['tagline'] %}
+				{%- if project['tagline'] -%}
 					<strong>{{ project['tagline'] }}</strong>
-				{% endif %}
+				{%- endif -%}
 				</br>
 				<span class="hidden-phone">
 					{{ project['description'] }}
@@ -29,10 +28,10 @@
 			</p>
 		</div>
 	</div>
-	{% endfor %}
+	{%- endfor -%}
 </div>
-{% else %}
+{%- else -%}
 <div class="alert alert-warning">
 	No projects were found in this resume
 </div>
-{% endif %}
+{%- endif -%}
