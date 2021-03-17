@@ -92,9 +92,9 @@ def download_link(filetype=None):
     if filetype == 'pdf':
         filename = '/resume.pdf'
     elif filetype == 'epub':
-        filename = '/resume.tex'
-    elif filetype == 'tex':
         filename = '/resume.epub'
+    elif filetype == 'tex':
+        filename = '/resume.tex'
     elif filetype == 'docx':
         filename = '/resume.docx'
     elif filetype == 'odt':

@@ -1,0 +1,20 @@
+https://ssl-config.mozilla.org/ - This is another great tool
+2m
+Image attached to message
+2m
+lol i need to work on it
+1m
+Heh
+1m
+Yeah
+1m
+https://www.ssllabs.com/index.html
+1m
+https://securityheaders.com/
+1m
+but isnt this pointless unless i do cors
+now
+https://hstspreload.org/
+now
+
+
