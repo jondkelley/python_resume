@@ -5,8 +5,11 @@
 </p>
 
 <hr />
-
-<h4>Hypervisors/Virtualization</h4>
+{% set section = 'Hypervisors/Virtualization' -%}
+<h4 id="{{ section | lower | make_slug }}">
+	<a class="pilcrow-experience" href="#{{ section | lower | make_slug }}">¶</a>
+	{{ section }}
+</h4>
 <div class="row">
 	{%- if resume['skills_hypervisors']|length > 0 -%}
 		{%- for skill in resume['skills_hypervisors'] | split_list_one -%}
@@ -63,7 +66,11 @@
 <hr />
 
 
-<h4>Devops Tools</h4>
+{% set section = 'Devops Tools' -%}
+<h4 id="{{ section | lower | make_slug }}">
+	<a class="pilcrow-experience" href="#{{ section | lower | make_slug }}">¶</a>
+	{{ section }}
+</h4>
 <div class="row">
 	{%- if resume['skills_devops_tools']|length > 0 -%}
 		{%- for skill in resume['skills_devops_tools'] | split_list_one -%}
@@ -120,7 +127,11 @@
 <hr />
 
 
-<h4>Build / CI Tools</h4>
+{% set section = 'Build / CI Tools' -%}
+<h4 id="{{ section | lower | make_slug }}">
+	<a class="pilcrow-experience" href="#{{ section | lower | make_slug }}">¶</a>
+	{{ section }}
+</h4>
 <div class="row">
 	{%- if resume['skills_ci_cd']|length > 0 -%}
 		{%- for skill in resume['skills_ci_cd'] | split_list_one -%}
@@ -174,7 +185,11 @@
 <hr />
 
 
-<h4>Skills</h4>
+{% set section = 'Skills' -%}
+<h4 id="{{ section | lower | make_slug }}">
+	<a class="pilcrow-experience" href="#{{ section | lower | make_slug }}">¶</a>
+	{{ section }}
+</h4>
 <div class="row">
 	{%- if resume['skills']|length > 0 -%}
 		{%- for skill in resume['skills'] | split_list_one -%}
@@ -228,9 +243,8 @@
 </div>
 
 <hr />
-
-<h3>Languages</h3>
-
+{% set section = 'Languages' -%}
+<h3>{{ section }}</h3>
 <div class="row">
 	{%- if resume['languages']|length > 0 -%}
 		{%- for skill in resume['languages'] | split_list_one -%}
