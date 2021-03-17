@@ -227,7 +227,7 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
   z-index:99999;
 }
 
-.docx-icon {
+.epub-icon {
   position:absolute;
   top:112px;
   left:5px;
@@ -241,7 +241,7 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
   z-index:99999;
 }
 
-.epub-icon {
+.docx-icon {
   position:absolute;
   top:168px;
   left:5px;
