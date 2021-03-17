@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-script-type" content="text/javascript" />
+		<meta http-equiv="content-style-type" content="text/css" />
+		<meta http-equiv="content-language" content="nl" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="author" content="Jonathan D Kelley" />	
+		<meta name="description" content="I'm Jonathan D Kelley, a ninja SRE / creative programmer with good knowledge of front-end techniques." />
+		<meta name="keywords" content="Jonathan D Kelley, Interactive Resume, Python programmer, Web developer, Startup, Interactive CV, Resume, CV, Rackspace, HRMatches" />
+		<meta name="robots" content="index, follow" />
+		<meta name="revisit-after" content="14 days" />
+		<title>Jonathan D Kelley - Site Reliability Engineer - Interactive Resume</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css" />
+		<link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet" />
+		<link href="{{ url_for('static', filename = 'css/style.css') }}" rel="stylesheet" />
+		
+		<link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}" type="image/x-icon" />
+		<link rel="icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}" type="image/x-icon" />
+		
+		<style>
+			body {
+			    background: #595BD4;
+			    font-family: 'Titillium Web', sans-serif;
+			}
+			a
+			{
+			    color: lightgreen;
+			    text-decoration: underline;
+			}
+			.loading {
+			    position: absolute;
+			    left: 0;
+			    right: 0;
+			    top: 50%;
+			    width: 200px;
+			    color: #FFF;
+			    margin: auto;
+			    -webkit-transform: translateY(-50%);
+			    -moz-transform: translateY(-50%);
+			    -o-transform: translateY(-50%);
+			    transform: translateY(-50%);
+			}
+			.loading span {
+			    position: absolute;
+			    height: 10px;
+			    width: 84px;
+			    top: 50px;
+			    overflow: hidden;
+			}
+			.loading span > i {
+			    position: absolute;
+			    height: 4px;
+			    width: 4px;
+			    border-radius: 50%;
+			    -webkit-animation: wait 4s infinite;
+			    -moz-animation: wait 4s infinite;
+			    -o-animation: wait 4s infinite;
+			    animation: wait 4s infinite;
+			}
+			.loading span > i:nth-of-type(1) {
+			    left: -28px;
+			    background: yellow;
+			}
+			.loading span > i:nth-of-type(2) {
+			    left: -21px;
+			    -webkit-animation-delay: 0.8s;
+			    animation-delay: 0.8s;
+			    background: lightgreen;
+			}
+
+			@-webkit-keyframes wait {
+			    0%   { left: -7px  }
+			    30%  { left: 52px  }
+			    60%  { left: 22px  }
+			    100% { left: 100px }
+			}
+			@-moz-keyframes wait {
+			    0%   { left: -7px  }
+			    30%  { left: 52px  }
+			    60%  { left: 22px  }
+			    100% { left: 100px }
+			}
+			@-o-keyframes wait {
+			    0%   { left: -7px  }
+			    30%  { left: 52px  }
+			    60%  { left: 22px  }
+			    100% { left: 100px }
+			}
+			@keyframes wait {
+			    0%   { left: -7px  }
+			    30%  { left: 52px  }
+			    60%  { left: 22px  }
+			    100% { left: 100px }
+			}
+		</style>
+		<!--[if lt IE 9]>
+			<script src="<?= VIEW_PATH; ?>js/html5shiv.js"></script>
+			<script src="<?= VIEW_PATH; ?>js/respond.min.js"></script>
+		<![endif]-->
+				
+		<!-- Begin Inspectlet Asynchronous Code -->
+		<script type="text/javascript">
+		(function() {
+		window.__insp = window.__insp || [];
+		__insp.push(['wid', 272811799]);
+		var ldinsp = function(){
+		if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=272811799&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+		setTimeout(ldinsp, 0);
+		})();
+		</script>
+		<!-- End Inspectlet Asynchronous Code -->
+      <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="loading">
+            <p>Please wait <a href="{{ filename }}">or click here</a>.</p>
+            <span><i></i><i></i></span>
+			</p>
+        </div>
+
+		<script type="text/JavaScript">
+			setTimeout("location.href = '{{ filename }}';",4500);
+		</script>
+    </body>
+</html>
+
+

@@ -82,3 +82,22 @@ def resume_json():
     json = app.make_response(json_dumps(resume, indent=5))
     json.mimetype = "text/plain"
     return json
+
+
+@myresume.route('/download/resume.<filetype>')
+def download_link(filetype=None):
+    """
+    redirects to the download page for tracking
+    """
+    if filetype == 'pdf':
+        filename = '/resume.pdf'
+    elif filetype == 'epub':
+        filename = '/resume.tex'
+    elif filetype == 'tex':
+        filename = '/resume.epub'
+    elif filetype == 'docx':
+        filename = '/resume.docx'
+    elif filetype == 'odt':
+        filename = '/resume.odt'
+    return render_template('download.html', filename=filename)
+
