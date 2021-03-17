@@ -10,8 +10,21 @@
 			{{ resume['profile']['biography'] }}
 		</p>
 	</div>
-	<div class="col-md-4 text-center">
-		<img src="{{ url_for('static', filename = 'images/jon_d_kelley.png') }}" alt="Jonathan D Kelley" width="246" height="246" />
+	<div class="col-md-4 text-center"><!-- 
+		<img src="{{ url_for('static', filename = 'images/jon_d_kelley.png') }}" alt="Jonathan D Kelley" width="246" height="246" /> -->
+
+		<div class="example"><!-- 
+	      <img src="https://jon-kelley.com/static/images/jon_d_kelley.png" class="grayscale"/> --><!-- 
+	      <img src="https://jon-kelley.com/static/images/jon_d_kelley.png" class="invert"/> -->
+	      <img src="https://jon-kelley.com/static/images/jon_d_kelley.png" class="blur"/>
+	    </div>
+
+	    <div class="example hide" id="hide">
+	      <img src="https://jon-kelley.com/static/images/jon_d_kelley.png" class="grayscale"/><!-- 
+	      <img src="https://jon-kelley.com/static/images/jon_d_kelley.png" class="invert" /> -->
+	      <img src="https://jon-kelley.com/static/images/jon_d_kelley.png" class="blur" />
+	    </div>
+
 	</div>
 	<div class="col-md-4">
 		<h3>Details</h3>
