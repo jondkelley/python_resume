@@ -177,6 +177,12 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
   padding: 15px;
 }
 
+#publications .publication { margin-bottom: 20px; }
+#publications .publication p > strong { display: block; padding-top: 8px; margin-bottom: 10px; }
+#publications .publication .publication-details { display: block; margin-top: 6px; }
+#publications .publication .publication-details * { color: #22A39F; }
+#publications .publication .publication-details .seperator { color: #BCBCBC; }
+
 #contact { padding-bottom: 200px; }
 #contact h2, #contact .row * { color: #FFFFFF; }
 #contact a { display: block; line-height: 32px; margin-bottom: 20px; opacity: 0.6; filter:alpha(opacity=60);  }

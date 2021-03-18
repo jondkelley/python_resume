@@ -498,6 +498,31 @@
 	}],
 	"tools": [],
 	"interests": [],
+	"publications": [{
+			"title": "Reconnecting after Postgres failover, introductory guide for the application developer.",
+			"image": "https://media-exp1.licdn.com/dms/image/C4E12AQHyC8mS7nxmbg/article-cover_image-shrink_423_752/0/1613359421943?e=1621468800&v=beta&t=Upg6leVQs73HdU2XkmBU9rb2TAfb9AZYGNDQk286Hew",
+			"tags": "#posgres #python #failover",
+			"link": "https://www.linkedin.com/pulse/reconnecting-after-postgres-failover-guide-developer-jonathan-kelley/",
+			"slug": "reconnecting-after-postgres-failover-guide",
+			"description": "A brief article targeted at application developers on how to use reconnection based connection strings using libpq."
+		},
+		{
+			"title": "Error Handling from backends to the frontend!",
+			"image": "https://media-exp1.licdn.com/dms/image/C4E12AQEWm0XZRpMiyw/article-cover_image-shrink_720_1280/0/1612056853933?e=1621468800&v=beta&t=G-Tiq13CVsw0CLniVXMCoq2HVPglch9q2ABRA9EdBqo",
+			"tags": "#exceptions #stacktrace #frontend #backend",
+			"link": "https://www.linkedin.com/pulse/error-handling-tips-from-backend-your-frontend-jonathan-kelley/",
+			"slug": "error-handling-tips-from-backend-your-frontend",
+			"description": "The history about error handling in computing, and how a modern developer can handle frontend and backend errors better."
+		},
+		{
+			"title": "How to design subnets the right way",
+			"image": "https://media-exp1.licdn.com/dms/image/C4E12AQHhNqoNc10d1A/article-cover_image-shrink_720_1280/0/1611863028299?e=1621468800&v=beta&t=NVc7AAc7WxXTHEpGsJ707coF-y7TA5ANLWZHwJU2Yxo",
+			"tags": "#subnet #networking #vpc #vlan #dnat #snat",
+			"link": "https://www.linkedin.com/pulse/how-design-subnets-right-way-jonathan-kelley/",
+			"slug": "how-design-subnets-right-way",
+			"description": "Regardless if you are running networks in a physical datacenter or across VPCs in the cloud, you only get one chance. Learn how to do it right the first time, every time."
+		}
+	],
 	"projects": [{
 			"title": "python_resume",
 			"description": "A showcase of Python/Flask/Jinja2/HTML(5)/Bootstrap/JQuery used to both generate jon-kelley.com and my hardcopy resume.",

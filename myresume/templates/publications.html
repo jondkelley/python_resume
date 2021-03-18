@@ -1,0 +1,45 @@
+<a class="pilcrow-section" href="#publications">¶</a>
+<h2>Publications</h2>
+
+<hr />
+
+<!--- https://stackoverflow.com/questions/18325779/bootstrap-3-collapse-show-state-with-chevron-icon --->
+{%- if resume['publications']|length > 0 -%}
+<div class="publications">
+	{%- for publication in resume['publications']-%}	
+	<div class="publication row">
+		<div class="col-md-4">
+			<a href="{{ publication['link'] }}" target="_blank">
+				<img style="width: 269px; height: 187px; object-fit: cover;" src="{{ publication['image'] }}"/>
+			</a>
+		</div>
+		<div class="col-md-8">
+			<p>
+				<strong>{{ publication['title'] }}</strong>
+				<span class="hidden-phone">
+					{{ publication['description'] }}
+				</span>
+				<br/>
+				{%- if publication['tags'] -%}
+				<span style="padding-top: 5px;" class="link">
+					<span class="glyphicon glyphicon-link"></span>
+					<a href="{{ publication['link'] }}" target="_blank">{{ publication['link'] }}</a>
+				</span>
+				<br/>
+				<span class="link">
+					<span class="glyphicon glyphicon-tags"></span>
+					{{ publication['tags'] }}
+				</span>
+				{%- endif -%}
+				<br/>
+			</p>
+		</div>
+	</div>
+	{%- endfor -%}
+</div>
+{%- else -%}
+<div class="alert alert-warning">
+	No publications were found in this resume
+</div>
+{%- endif -%}
+
