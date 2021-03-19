@@ -64,7 +64,7 @@
 			"level": "Full Time",
 			"description": "Worked in a cross-discipline devops team managing everything from Kubernetes via terraform infrastructure-as-code to Chef on ec2 instances. Used best security practices in a strict HIPAA environment with segmented networks and RBAC/IAM policies on AWS.",
 			"accomplishments": [
-				"Built Doximities first platform under k8s on EKS with Istio using Ansible, Terraform and Helm charts.",
+				"Built Doximity's first platform under k8s on EKS with Istio using Ansible, Terraform and Helm charts.",
 				"Configured Sensu monitoring scripts for production systems.",
 				"Built Jenkins automation for Chef jobs using Jenkins Job Builder.",
 				"Wrote / manage cookbooks in Chef as well as the dependencies for patch management and better inspect testing / kitchen tests.",
