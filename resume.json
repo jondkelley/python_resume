@@ -107,8 +107,8 @@
 				"Help start conversion of 230 or so Jenkins jobs to store them in Yaml and re-deploy with a tool called Jenkins Job builder. This helps enable full Jenkins disaster recovery in <1 hour instead of >2 weeks.",
 				"Migrated tooling from Puppet2 to Puppet3 with PuppetDB, Hiera, puppetserver, directory environments and wrote a tool to wrap r10k. Security compliant PuppetDB database security model. This reduces complexity and applies patterns we were missing previously.",
 				"Maintains Ansible modules that allow us to store firewall configurations in git. Built a release pipeline to deploy on git push. This builds a \"working documentation\" and a git log to make instant rollbacks a snap in production environments.",
-				"Automation work with Cisco 6509 routers and Catalyst switching platform.",
 				"Built & configured Cisco ASA 5585 (ASA/IOS 8.3) for routing behind protected VLANS in hot-standby configuration using VRRP.",
+				"Automation work with Cisco 6509 routers and Catalyst switching platform.",
 				"Implemented FreeIPA IAM solution to offer Kerberos and LDAP authentication."
 			],
 			"start_date": "2014-08-01",
