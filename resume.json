@@ -66,10 +66,10 @@
 			"accomplishments": [
 				"Built Doximity's first platform under k8s on EKS with Istio using Ansible, Terraform and Helm charts.",
 				"Configured Sensu monitoring scripts for production systems.",
+				"Moved Jenkins jobs from traditional EC2 swarm builders over to ECS based pipelines for better resource utilization / cost saving.",
 				"Built Jenkins automation for Chef jobs using Jenkins Job Builder.",
 				"Wrote / manage cookbooks in Chef as well as the dependencies for patch management and better inspect testing / kitchen tests.",
 				"Built ansible/terraform based deployment system for Kubernetes and Istio onto EKS so the entire Doximity platform could be migrated.",
-				"Moved Jenkins jobs from traditional EC2 swarm builders over to ECS based pipelines for better resource utilization / cost saving.",
 				"Refactored Terraform across teams using multiple statefiles using both Jenkins pipelines and Atlantis. Migrated systems to modules rather then sprawled HCL resources."
 			],
 			"start_date": "2019-05-01",
@@ -86,9 +86,9 @@
 				"Participates in on-call SRE style rotation for a split Windows / Linux environment.",
 				"Works with common Amazon AWS toolsets such as ECS, EC2, VPC, ELB, SQS and Lambda's.",
 				"Subject matter expert and mentor for Linux applications and platform tools.",
+				"Managed TeamCity build pipelines along with Jenkins for operational tasks.",
 				"Re-tooled container stack for frontend Wordpress product from 5 year old shell magic to docker-compose v3 + python-paver build process (for gulp/yarn/phpunit)",
 				"Upgraded php-fpm to PHP 7 from legacy PHP 5 stack, with weighted load canary testing as proof to launch.",
-				"Managed TeamCity build pipelines along with Jenkins for operational tasks.",
 				"Works with Varnishd, Memcached, Wordpress Network Sites, HAProxy, MySQL and Docker.",
 				"Uses Ansible to convert stacks previously hand-hacked into ground-up infrastructure as code."
 			],
@@ -124,9 +124,9 @@
 			"accomplishments": [
 				"Built continuous integration in Jenkins for 5 new products using a python API we wrote to trigger builds on a build server and cycling app deployments.",
 				"Wrote python SDK for build system platform and deployment system so developers can hook, deploy and release 4 products via REST api from python CLI or jenkins or virtually anything.",
-				"Moved apps to hosted Mongo service called Objectrocket to keep in-house operations costs at a minimum.",
 				"Manages staging,pre prod and prod environments for complex Ruby web app that 6000+ growing employees use 24/7 to manage the administrative backends for the worlds 2nd largest public cloud.",
 				"Manages deployments in one-click (okay its actually 3 clicks) fashion using Salt and yum repositories to distribute software and configurations.",
+				"Moved apps to hosted Mongo service called Objectrocket to keep in-house operations costs at a minimum.",
 				"Handling deployment and design considerations for next-gen architecture replacing legacy internal controls design from serial to fully async process with a service backend layer to connect to backends/dbs/apis. The next gen is Python 3/Tornado with Angular.js web frontends. This is to replace a traditionally monolithic serial threaded Ruby 1.8.7 application on Phusion Passenger which bundled business logic and just couldn't scale.",
 				"Seeing weakpoints in ops/qe tests I have written BDD Gherkin style templates in pyhon using \"behave\" to test any API that is REST. Could be extremely helpful for ops or QA functional end to end testing. It's in my projects section called testvAPI."
 			],
