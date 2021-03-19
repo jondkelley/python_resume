@@ -37,16 +37,16 @@
 	}],
 	"careers": [{
 			"title": "LogDNA",
-			"specification": "Sr. Cloud Support / Kubernetes Engineer",
+			"specification": "Sr. Cloud Support Engineer",
 			"location": "San Francisco Bay Area",
 			"level": "Full Time",
 			"description": "Works on the support team supporting a myriad of log ingestion configurations as well as helping the SRE team during incidents.",
 			"accomplishments": [
-				"Assists the production SRE team during incidents and outages with generalized investigation of k8s stack / node failures on IBM and helps act as a technical liaison to IBM incident managers.",
-				"Expanding access tools to internal CLI python client (logdnactl) for better integration with the SRE’s",
-				"Built a support dashboard for support to manage and integrated Flask/Rebrow Redis blueprints into the app along with Python- eve for full-search MongoORM via REST. All behind python-authlib and OpenIDConnect/Okta for RBAC.",
+				"Assists the production SRE team during incidents and outages with investigation of k8s stack / node failures on IBM.",
+				"Expanding access tools to internal CLI python client (logdnactl) for better integration into backend systems for the SRE team.",
+				"Built a support dashboard for support to manage and integrated Flask/Rebrow Redis blueprints into the app along with Python-eve (REST toolkit) for full-search MongoORM via REST. All behind python-authlib and OpenIDConnect/Okta for RBAC.",
+				"Re-wrote the ansible integration for LogDNA logging library for a variety of new features for our customers.",
 				"Added functionality to support dashboard to look into ElasticSearch field mappings to troubleshoot index limits and indicate growth needs for customers.",
-				"Redeveloped the ansible integration for LogDNA for a variety of new features for our customers.",
 				"Developed a proxy request tool for webhooks so support can easily debug webhook payloads.",
 				"Rebuilt Ansible-logdna handler in Python (git: logdna/ansible-logdna PR #8) to improve functionality and modernize the framework.",
 				"Developed a proxy request tool for support to debug webhook payloads, a bit more purpose oriented than netcat .",
@@ -500,7 +500,7 @@
 	"tools": [],
 	"interests": [],
 	"publications": [{
-			"title": "Reconnecting after Postgres failover, introductory guide for the application developer.",
+			"title": "Reconnecting after Postgres failover, introductory guide for application developers.",
 			"image": "https://media-exp1.licdn.com/dms/image/C4E12AQHyC8mS7nxmbg/article-cover_image-shrink_423_752/0/1613359421943?e=1621468800&v=beta&t=Upg6leVQs73HdU2XkmBU9rb2TAfb9AZYGNDQk286Hew",
 			"tags": "#posgres #python #failover",
 			"link": "https://www.linkedin.com/pulse/reconnecting-after-postgres-failover-guide-developer-jonathan-kelley/",
@@ -575,7 +575,7 @@
 		},
 		{
 			"title": "vagrantfile-skel",
-			"description": "I've made this repo because I keep encountering quick environments I need from time to time. I might as well collect them together here.",
+			"description": "I made this repo because I keep encountering quick environments setup / breakfix I need from time to time.",
 			"tagline": "Common Vagrantfiles I tend to be using",
 			"tags": null,
 			"link": "https://github.com/jondkelley/vagrantfile-skel"
