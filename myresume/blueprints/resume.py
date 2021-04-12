@@ -33,7 +33,7 @@ def login():
 @myresume.route("/terminal", methods=['GET', 'POST'])
 def term():
     """
-    Terminal
+    terminal iframe
     """
     return render_template('term.html')
 
@@ -78,7 +78,7 @@ def resume_markdown_theme(theme='3'):
 @myresume.route("/resume.json", methods=['GET', 'POST'])
 def resume_json():
     """
-    Return resume in pretty JSON
+    return resume in pretty JSON
     """
     print(resume)
     json = app.make_response(json_dumps(resume, indent=5))
