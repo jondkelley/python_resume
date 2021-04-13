@@ -4,7 +4,7 @@ Resume - Jonathan D Kelley - jon-kelley.com
 This Git repository serves two purposes:
 
 * A) to render my resume in HTML(5) / Bootstrap / Markdown / PDF / DOCX
-* B) to showcase my skills as a "Devops Engineer" by building this piece of engineering.
+* B) to showcase my skills as a "Devops Engineer" by building this piece of engineering with (mostly) best practices.
 
 ##### The showcase.
 
@@ -16,8 +16,7 @@ See the interactive live version of this [Jon-Kelley.com](https://jon-kelley.com
 
 ##### The premise for this project.
 
-I wrote this because I was tired of directly maintaining a markdown resume and converting it to DOCX/PDF for recruiters. I figured why not build something that makes my life easier -- the same reason Devops models exist in the firts place?
-
+I wrote this because I was tired of directly maintaining a markdown resume and converting it to DOCX/PDF for recruiters. I figured why not build something that makes my life easier -- the same reason Devops models exist in the first place. I decided to showcase some of my skills in devops while I was at it. Who could ask for a better resume?
 
 ##### The architecture
 
@@ -28,6 +27,23 @@ A simplified component diagram of this architecture is below which should give y
 ##### The k8s architecture
 
 ![](k8s-architecture.png)
+
+##### Core competencies demonstrated:
+
+* Docker
+* docker-compose
+* kubernetes (and sidecars)
+* Makefile (m4 macro language)
+* Docker build/publish scripts
+* Docker volumes
+* Python3
+* Flask
+* BASH
+* Jinja2
+* Pandoc
+* HTML5, Jquery, CSS, and Bootstrap
+* Software integration
+* Good documentation
 
 ## Quick Start
 
@@ -89,6 +105,15 @@ docker run --rm -ti -p 5001:5001 jondkelley/python_resume:latest
 
 Then access resume via `http://<your-docker-ip>:5001/` and set the host name in the login screen to `redis` or your Redis instance if it's something else..
 
+## Build/Publish using makefile
+
+Quickly make and publish artifacts to dockerhub.
+
+```
+make build
+make push
+```
+
 ## Contributers
 
 * 2021 Jonathan Kelley
@@ -97,4 +122,6 @@ Then access resume via `http://<your-docker-ip>:5001/` and set the host name in 
 
 This Resume was inspired by an interactive dynamic resume created by web designer **[Pascal Van Gemert](http://pascalvangemert.nl/)** ([Github](https://github.com/pascalvgemert/resume)).
 
-I ported his PHP / bootstrap framework over to Python / Flask / Jinja2, with my own inspiration along the way. Then I Dockerized my project and made it work on my bare metal kubernetes cluster using PVC's and MetalLB. Docker-compose is available for local development. The container is built using a sidecar running pandoc in a bash loop, and a shared PVC to make various rendered resume formats (every 10 seconds) available to the Flask webserver.
+I ported his PHP / bootstrap framework over to Python / Flask / Jinja2, with my own inspiration along the way. Then I Dockerized my project and made it work on my bare metal kubernetes cluster using PVC's and MetalLB. Docker-compose is available for local development.
+
+The container is built using a sidecar running pandoc in a bash loop, and a shared PVC to make various rendered resume formats (every 10 seconds) available to the Flask webserver.
