@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-resume-pandoc-share
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: nfs-csi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jonk-resume-app
+spec:
+  selector:
+    matchLabels:
+      app: jonk-resume-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jonk-resume-app
+    spec:
+      volumes:
+        - name: task-pvc-pandoc-share
+          persistentVolumeClaim:
+            claimName: pvc-resume-pandoc-share
+      containers:
+      - name: resume
+        image: jondkelley/python_resume:latest
+        ports:
+        - name: ssh
+          containerPort: 5001
+        volumeMounts:
+        - mountPath: "/pandoc/"
+          name: task-pvc-pandoc-share
+      - name: pandoc
+        image: jondkelley/pandoc_resume:latest
+        env:
+          - name: MYRESUME_HOST
+            value: localhost:5001
+        volumeMounts:
+        - mountPath: "/pandoc/"
+          name: task-pvc-pandoc-share
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jonk-resume-app
+spec:
+  externalTrafficPolicy: Local
+  ports:
+  - name: ssh
+    port: 80
+    targetPort: 5001
+  selector:
+    app: jonk-resume-app
+  type: LoadBalancer
