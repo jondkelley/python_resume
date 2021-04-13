@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jonk-resume-app
+spec:
+  selector:
+    matchLabels:
+      app: jonk-resume-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jonk-resume-app
+    spec:
+      volumes:
+        - name: shared-volume
+          hostPath:
+            path: /tmp/jonk-resume-app
+      containers:
+      - name: resume
+        image: jondkelley/python_resume:latest
+        env:
+          - name: UPDATE_SECRET
+            value: changeme
+        ports:
+        - name: ssh
+          containerPort: 5001
+        volumeMounts:
+        - mountPath: "/pandoc/"
+          name: shared-volume
+      - name: pandoc
+        image: jondkelley/pandoc_resume:latest
+        env:
+          - name: MYRESUME_HOST
+            value: localhost:5001
+        volumeMounts:
+        - mountPath: "/pandoc/"
+          name: shared-volume
