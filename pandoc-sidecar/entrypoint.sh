@@ -3,11 +3,16 @@
 # wait for flask pod to start
 sleep 5
 
+count=1;
+
 while(true); do
   echo "$(date -u) -- Waking up"
   tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
   pushd $tmp_dir
       curl http://$MYRESUME_HOST/resume.md/ > resume.md
+
+      echo -e "\n<br>Generation counter:" $(( count++ )) >> resume.md
+
       styleformats="html pdf docx"
       for format in $styleformats; do
         pandoc -s resume.md -c /root/markdown8.css -o /pandoc/resume.$format --metadata title="resume"
