@@ -108,7 +108,7 @@ def retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
 @myresume.route('/download/resume.<filetype>')
 def download_link(filetype=None):
     """
-    redirects to the download page for tracking
+    loads a resume off the pandoc shared docker volume
     """
     sourcefile_path = '/pandoc/'
     name = 'jonathan_d_kelley'
