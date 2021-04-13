@@ -22,7 +22,7 @@ if __name__ == "__main__":
         packages=find_packages(),
         include_package_data=True,
         package_dir={NAME: NAME},
-        description="rebrow - Interactie online resume",
+        description="myresume - Interactive online resume for jon-kelley.com",
         install_requires=['python-slugify', 'markdown', 'Flask==1.1.0'],
         entry_points={
             'console_scripts': ['myresume = myresume.runserver:main'],

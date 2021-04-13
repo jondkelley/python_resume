@@ -9,6 +9,7 @@ from flask import current_app as app
 from flask import render_template, redirect, url_for, send_file
 from json import load as json_load
 from json import dumps as json_dumps
+from json import loads as json_loads
 from myresume.sharedlib.jinja2 import get_current_datetime
 from myresume.sharedlib.jinja2 import resume_date as filter_resume_date
 from myresume.sharedlib.jinja2 import make_slug as filter_make_slug
@@ -17,27 +18,89 @@ import jinja2
 import markdown
 import markdown.extensions.fenced_code
 import mimetypes
+import urllib.request
 from uuid import uuid4
 
 myresume = Blueprint('myresume', __name__)
-try:
-    with open('/resume/resume.json', 'r') as outfile:
-            resume = json_load(outfile)
-except OSError as e:
-    resume = {}
 
 
-@myresume.route("/", methods=['GET', 'POST'])
-def login():
+class ResumeSingleton:
     """
-    Start page
+    singleton instance to manage the resume, this allows me do in-app updates
+    of resume content from github without having to rebuild the whole
+    container with the static resume.json content, extremely useful if
+    tailoring the resume to a specific job application or company
     """
-    if not resume:
-        return render_template('noresume.html', resume=resume)
-    return render_template('index.html', resume=resume)
+    __instance = None
+    @staticmethod
+    def get_instance():
+        """
+        return singleton instance
+        """
+        if ResumeSingleton.__instance == None:
+            ResumeSingleton()
+        return ResumeSingleton.__instance
+
+    def resume(self):
+        """
+        return the current resume data
+        """
+        return self.resume
+
+    def refresh_resume(self, url):
+        """
+        refresh resume off github content
+        """
+        if not url:
+            url = 'https://raw.githubusercontent.com/jondkelley/python_resume/master/resume.json'
+        req = urllib.request.Request(url)
+        r = urllib.request.urlopen(req).read()
+        self.resume = json_loads(r.decode('utf-8'))
+
+    def __init__(self):
+        """
+        private constructor
+        """
+        if ResumeSingleton.__instance != None:
+            raise Exception("This class is a singleton, don't use parenthesis!")
+        else:
+            ResumeSingleton.__instance = self
+            try:
+                # load resume from docker image on startup
+                with open('/resume/resume.json', 'r') as outfile:
+                        self.resume = json_load(outfile)
+            except OSError as e:
+                # if container is missing resume content, load from github
+                self.refresh_resume()
+
+resume_instance = ResumeSingleton()
+
+@myresume.route("/resume/update", methods=['GET'])
+def update():
+    """
+    update my resume with newer content from github without requiring full container rebuild
+    """
+    resume_url = request.args.get('url', None)
+    cv = ResumeSingleton.get_instance()
+    cv.refresh_resume(resume_url)
+    response = {"status": "updated", "resume": cv.resume}
+    json = app.make_response(json_dumps(response, indent=5))
+    json.mimetype = "text/plain"
+    return json
 
 
-@myresume.route("/terminal", methods=['GET', 'POST'])
+@myresume.route("/", methods=['GET'])
+def home():
+    """
+    home page
+    """
+    cv = ResumeSingleton.get_instance()
+    if not cv.resume:
+        return render_template('noresume.html', resume=cv.resume)
+    return render_template('index.html', resume=cv.resume)
+
+
+@myresume.route("/terminal")
 def term():
     """
     terminal iframe
@@ -49,11 +112,12 @@ def generate_markdown():
     """
     generate resume in markdown format
     """
+    cv = ResumeSingleton.get_instance()
     jinja2.filters.FILTERS['resume_date'] = filter_resume_date
     jinja2.filters.FILTERS['make_slug'] = filter_make_slug
     env = jinja2.Environment(loader=jinja2.FileSystemLoader("/resume/"))
     template = env.get_template("resume.md.jinja2")
-    markdown = template.render(resume=resume, current_timestamp_utc=get_current_datetime(), uuid=uuid4())
+    markdown = template.render(resume=cv.resume, current_timestamp_utc=get_current_datetime(), uuid=uuid4())
     return markdown
 
 
@@ -74,6 +138,8 @@ def resume_markdown_theme(theme='3'):
     """
     generates a rendered markdown document from resume theme
     """
+    cv = ResumeSingleton.get_instance()
+    resume = cv.resume
     html_body = markdown.markdown(generate_markdown(), extensions=[
                                   'fenced_code', 'codehilite'])
     stylesheet = f'<link rel="stylesheet" href="/static/css/markdown/markdown{theme}.css"/>'
@@ -81,12 +147,13 @@ def resume_markdown_theme(theme='3'):
     preface = '<p><strong><em>Click <a href="/resume.md/">here</a> for raw markdown.</em></strong></p>'
     return f'{header}\n\n{preface}{html_body}'
 
-@myresume.route("/resume.json", methods=['GET', 'POST'])
+@myresume.route("/resume.json")
 def resume_json():
     """
     return resume in pretty JSON
     """
-    print(resume)
+    cv = ResumeSingleton.get_instance()
+    resume = cv.resume
     json = app.make_response(json_dumps(resume, indent=5))
     json.mimetype = "text/plain"
     return json
@@ -128,5 +195,4 @@ def download_link(filetype=None):
     elif filetype == 'odt':
         sourcefile = sourcefile.format(sourcefile_path=sourcefile_path,filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    #return render_template('download.html', filename=filename)
 
