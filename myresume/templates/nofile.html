@@ -1,0 +1,19 @@
+<head>
+<style>
+h2, h3, p, li {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+<h2>Cannot load {{ filename }}</h2>
+<h3>Pandoc might not support this file type.</h3>
+<hr>
+<p>
+	These alternative resume formats are available:
+	{% for file in files %}
+	<ul>
+		<li><a href="/pandoc/{{ file }}">{{ file }}</a></li>
+	</ul>
+	{% endfor %}
+</body>

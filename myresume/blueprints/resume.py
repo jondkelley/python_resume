@@ -11,7 +11,7 @@ from json import loads as json_loads
 from myresume.sharedlib.jinja2 import get_current_datetime
 from myresume.sharedlib.jinja2 import resume_date as filter_resume_date
 from myresume.sharedlib.jinja2 import make_slug as filter_make_slug
-from os import environ
+from os import environ, path, walk
 from uuid import uuid4
 import io
 import jinja2
@@ -107,7 +107,7 @@ def home():
     """
     cv = ResumeSingleton.get_instance()
     if not cv.resume:
-        return render_template('noresume.html', resume=cv.resume)
+        return render_template('nojson.html', resume=cv.resume)
     return render_template('index.html', resume=cv.resume)
 
 
@@ -172,69 +172,32 @@ def resume_json():
     return json
 
 
-def retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name):
+def render_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name):
     """
     retrieve and send the specified resume from the pandoc directory
     """
     mimetype = mimetypes.guess_type(sourcefile)[0]
     with open(sourcefile, 'rb') as outfile:
+        # with io.open(sourcefile, mode="rb", encoding="utf-8") as outfile:
         file = outfile.read()
         return send_file(
             io.BytesIO(file),
-            attachment_filename=f'{name}_resume.{filetype}',
+            attachment_filename=f'resume.{filetype}',
             mimetype=mimetype
         )
 
 
-@myresume.route('/download/resume.<filetype>')
+@myresume.route('/pandoc/resume.<filetype>')
 def download_link(filetype=None):
     """
     loads a resume off the pandoc shared docker volume
     """
     sourcefile_path = '/pandoc/'
     name = 'jonathan_d_kelley'
-    sourcefile = '{sourcefile_path}resume.{filetype}'
-    if filetype == 'pdf':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'epub':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'tex':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'docx':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'odt':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'rst':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'jira':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'man':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'commonmark':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'biblatex':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-    elif filetype == 'bibtex':
-        sourcefile = sourcefile.format(
-            sourcefile_path=sourcefile_path, filetype=filetype)
-        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+    sourcefile = f'{sourcefile_path}resume.{filetype}'
+
+    if not path.exists(sourcefile):
+        _, _, available_files = next(walk(sourcefile_path))
+        return render_template('nofile.html', filename=sourcefile, files=available_files)
+    else:
+        return render_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
