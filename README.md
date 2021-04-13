@@ -25,6 +25,10 @@ A simplified component diagram of this architecture is below which should give y
 
 ![](conceptual_architecture_small.jpg)
 
+##### The k8s architecture
+
+![](k8s-architecture.png)
+
 ## Quick Start
 
 ## Running in docker-compose
