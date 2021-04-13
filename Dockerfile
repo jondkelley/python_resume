@@ -12,5 +12,8 @@ WORKDIR /app
 
 RUN python3 setup.py install
 
+COPY ./resume.json /resume/resume.json
+COPY ./resume.md.jinja2 /resume/resume.md.jinja2
+
 EXPOSE 5001
 ENTRYPOINT ["myresume"]

@@ -7,11 +7,29 @@ services:
     ports:
       - 5001:5001
     volumes:
-      - ./resume.json:/resume.json
-      - ./resume.md.jinja2:/resume.md.jinja2
+      # the json and jinja2 volumes overload what the Dockerfile inserts on build
+      - ./resume.json:/resume/resume.json
+      - ./resume.md.jinja2:/resume/resume.md.jinja2
+      - app-volume:/pandoc
     restart: always
     networks:
       - resume_net
+  pandoc:
+    environment:
+      - MYRESUME_HOST=resume:5001
+    build:
+      context: pandoc-sidecar
+      dockerfile: Dockerfile
+    container_name: pandoc
+    volumes:
+      - app-volume:/pandoc
+    restart: always
+    networks:
+      - resume_net
+
+# https://github.com/jonbrouse/docker-pandoc/blob/master/docker-compose.yml
+volumes:
+     app-volume:
 
 networks:
   resume_net:
