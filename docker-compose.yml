@@ -8,6 +8,7 @@ services:
       - 5001:5001
     volumes:
       # the json and jinja2 volumes overload what the Dockerfile inserts on build
+      # to allow for local modifications and real-time development
       - ./resume.json:/resume/resume.json
       - ./resume.md.jinja2:/resume/resume.md.jinja2
       - app-volume:/pandoc
@@ -27,7 +28,6 @@ services:
     networks:
       - resume_net
 
-# https://github.com/jonbrouse/docker-pandoc/blob/master/docker-compose.yml
 volumes:
      app-volume:
 
