@@ -2,7 +2,7 @@
 # Author      : Jon Kelley <jonk@omg.lol>
 # Description : Interactive online resume for jon-kelley.com
 
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json
+from flask import Blueprint, Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json, make_response, send_file
 from myresume.blueprints.resume import myresume
 from myresume.sharedlib.jinja2 import split_list_one, split_list_two, reverse_string, resume_date, calculate_age, make_slug
 import base64

@@ -6,6 +6,7 @@ import datetime
 from slugify import slugify
 
 # Custom jinja2 globals
+# ---------------------
 
 
 def get_current_datetime():
@@ -15,6 +16,7 @@ def get_current_datetime():
 
 
 # Custom jinja2 filters
+# ---------------------
 
 
 def split_list_one(a_list):

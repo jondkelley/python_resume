@@ -3,10 +3,8 @@
 # Description : Interactive online resume for jon-kelley.com
 
 
-from flask import Blueprint, request
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json, make_response
+from flask import Blueprint, Flask, request, session, g, redirect, url_for, abort, render_template, flash, Markup, Response, json, make_response, send_file
 from flask import current_app as app
-from flask import render_template, redirect, url_for, send_file
 from json import load as json_load
 from json import dumps as json_dumps
 from json import loads as json_loads
@@ -14,13 +12,12 @@ from myresume.sharedlib.jinja2 import get_current_datetime
 from myresume.sharedlib.jinja2 import resume_date as filter_resume_date
 from myresume.sharedlib.jinja2 import make_slug as filter_make_slug
 from os import environ
+from uuid import uuid4
 import io
 import jinja2
 import markdown
-import markdown.extensions.fenced_code
 import mimetypes
 import urllib.request
-from uuid import uuid4
 
 myresume = Blueprint('myresume', __name__)
 
@@ -33,6 +30,7 @@ class ResumeSingleton:
     tailoring the resume to a specific job application or company
     """
     __instance = None
+
     @staticmethod
     def get_instance():
         """
@@ -63,18 +61,21 @@ class ResumeSingleton:
         private constructor
         """
         if ResumeSingleton.__instance != None:
-            raise Exception("This class is a singleton, don't use parenthesis!")
+            raise Exception(
+                "This class is a singleton, don't use parenthesis!")
         else:
             ResumeSingleton.__instance = self
             try:
                 # load resume from docker image on startup
                 with open('/resume/resume.json', 'r') as outfile:
-                        self.resume = json_load(outfile)
+                    self.resume = json_load(outfile)
             except OSError as e:
                 # if container is missing resume content, load from github
                 self.refresh_resume()
 
+
 resume_instance = ResumeSingleton()
+
 
 @myresume.route("/resume/update", methods=['GET'])
 def update():
@@ -92,7 +93,8 @@ def update():
         json.mimetype = "text/plain"
         return json
     else:
-        response = {"status": "unauthorized", "reason": "bad or missing secret"}
+        response = {"status": "unauthorized",
+                    "reason": "bad or missing secret"}
         json = app.make_response(json_dumps(response, indent=5))
         json.mimetype = "text/plain"
         return json, 401
@@ -126,7 +128,8 @@ def generate_markdown():
     jinja2.filters.FILTERS['make_slug'] = filter_make_slug
     env = jinja2.Environment(loader=jinja2.FileSystemLoader("/resume/"))
     template = env.get_template("resume.md.jinja2")
-    markdown = template.render(resume=cv.resume, current_timestamp_utc=get_current_datetime(), uuid=uuid4())
+    markdown = template.render(
+        resume=cv.resume, current_timestamp_utc=get_current_datetime(), uuid=uuid4())
     return markdown
 
 
@@ -156,6 +159,7 @@ def resume_markdown_theme(theme='3'):
     preface = '<p><strong><em>Click <a href="/resume.md/">here</a> for raw markdown.</em></strong></p>'
     return f'{header}\n\n{preface}{html_body}'
 
+
 @myresume.route("/resume.json")
 def resume_json():
     """
@@ -167,19 +171,21 @@ def resume_json():
     json.mimetype = "text/plain"
     return json
 
+
 def retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name):
     """
     retrieve and send the specified resume from the pandoc directory
     """
     mimetype = mimetypes.guess_type(sourcefile)[0]
     with open(sourcefile, 'rb') as outfile:
-    #with io.open(sourcefile, mode="rb", encoding="utf-8") as outfile:
+        # with io.open(sourcefile, mode="rb", encoding="utf-8") as outfile:
         file = outfile.read()
         return send_file(
-                     io.BytesIO(file),
-                     attachment_filename=f'{name}_resume.{filetype}',
-                     mimetype=mimetype
-               )
+            io.BytesIO(file),
+            attachment_filename=f'{name}_resume.{filetype}',
+            mimetype=mimetype
+        )
+
 
 @myresume.route('/download/resume.<filetype>')
 def download_link(filetype=None):
@@ -190,18 +196,22 @@ def download_link(filetype=None):
     name = 'jonathan_d_kelley'
     sourcefile = '{sourcefile_path}resume.{filetype}'
     if filetype == 'pdf':
-        sourcefile = sourcefile.format(sourcefile_path=sourcefile_path,filetype=filetype)
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
     elif filetype == 'epub':
-        sourcefile = sourcefile.format(sourcefile_path=sourcefile_path,filetype=filetype)
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
     elif filetype == 'tex':
-        sourcefile = sourcefile.format(sourcefile_path=sourcefile_path,filetype=filetype)
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
     elif filetype == 'docx':
-        sourcefile = sourcefile.format(sourcefile_path=sourcefile_path,filetype=filetype)
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
     elif filetype == 'odt':
-        sourcefile = sourcefile.format(sourcefile_path=sourcefile_path,filetype=filetype)
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
-
