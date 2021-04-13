@@ -17,14 +17,9 @@ while(true); do
 
       echo -e "\n\n<br>ContainerId: $(hostname) Load: $(cat /proc/loadavg | awk '{ print $1 , $2 , $3 }')" >> resume.md
 
-      styleformats="html pdf docx"
-      for format in $styleformats; do
+      formats="html pdf docx tex epub odt rst man jira ipynb commonmark biblatex bibtex native"
+      for format in $formats; do
         pandoc -s resume.md -c /root/markdown8.css -o /pandoc/resume.$format --metadata title=" "
-      done
-
-      txtformats="tex epub odt rst man jira ipynb commonmark biblatex bibtex native"
-      for format in $txtformats; do
-        pandoc -s resume.md -o /pandoc/resume.$format.txt --metadata title=" "
       done
       rm resume.md
   popd
