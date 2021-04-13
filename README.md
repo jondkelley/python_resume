@@ -21,7 +21,7 @@ I wrote this because I was tired of directly maintaining a markdown resume and c
 
 ##### The architecture
 
-A simplified component diagram of this architecture is below which should give you an idea of how the codebase works, even if you're not technical.
+A simplified component diagram of this architecture is below which should give you a simplified idea of how the codebase works, even if you're not technical.
 
 ![](conceptual_architecture_small.jpg)
 
@@ -65,11 +65,10 @@ Then access resume via `http://<your-docker-ip>:5001/` and set the host name in 
 
 ## Contributers
 
-* 2020 Jonathan Kelley
+* 2021 Jonathan Kelley
 
 ## Inspiration
 
-This Resume was inspired by an interctive dynamic resume created by designer **[Pascal Van Gemert](http://pascalvangemert.nl/)** and written in [PHP / Laravel / bootstrap3 code](https://github.com/pascalvgemert/resume).
+This Resume was inspired by an interctive dynamic resume created by designer **[Pascal Van Gemert](http://pascalvangemert.nl/)** ([Github](https://github.com/pascalvgemert/resume)).
 
-I ported this framework over to Python / Flask / Jinja2 since this is my domain strong suit. I made a few changes along the way as well as dockerizing this project for Kubernetes. Hooray. I also bought him some beer for the great idea and concept.
- 
+I ported his PHP / bootstrap framework over to Python / Flask / Jinja2, with my own inspiration along the way. Then I Dockerized my project and made it work on my bare metal kubernetes cluster using PVC's and MetalLB. Docker-compose is available for local development. The container is built using a sidecar running pandoc in a bash loop, and a shared PVC to make various rendered resume formats (every 10 seconds) available to the Flask webserver.
