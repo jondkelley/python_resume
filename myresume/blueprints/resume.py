@@ -178,7 +178,6 @@ def retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
     """
     mimetype = mimetypes.guess_type(sourcefile)[0]
     with open(sourcefile, 'rb') as outfile:
-        # with io.open(sourcefile, mode="rb", encoding="utf-8") as outfile:
         file = outfile.read()
         return send_file(
             io.BytesIO(file),
@@ -212,6 +211,30 @@ def download_link(filetype=None):
             sourcefile_path=sourcefile_path, filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
     elif filetype == 'odt':
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
+        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+    elif filetype == 'rst':
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
+        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+    elif filetype == 'jira':
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
+        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+    elif filetype == 'man':
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
+        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+    elif filetype == 'commonmark':
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
+        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+    elif filetype == 'biblatex':
+        sourcefile = sourcefile.format(
+            sourcefile_path=sourcefile_path, filetype=filetype)
+        return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+    elif filetype == 'bibtex':
         sourcefile = sourcefile.format(
             sourcefile_path=sourcefile_path, filetype=filetype)
         return retrieve_resume_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
