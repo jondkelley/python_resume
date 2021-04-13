@@ -13,6 +13,7 @@ from json import loads as json_loads
 from myresume.sharedlib.jinja2 import get_current_datetime
 from myresume.sharedlib.jinja2 import resume_date as filter_resume_date
 from myresume.sharedlib.jinja2 import make_slug as filter_make_slug
+from os import environ
 import io
 import jinja2
 import markdown
@@ -81,12 +82,20 @@ def update():
     update my resume with newer content from github without requiring full container rebuild
     """
     resume_url = request.args.get('url', None)
-    cv = ResumeSingleton.get_instance()
-    cv.refresh_resume(resume_url)
-    response = {"status": "updated", "resume": cv.resume}
-    json = app.make_response(json_dumps(response, indent=5))
-    json.mimetype = "text/plain"
-    return json
+    secret = request.args.get('secret', False)
+    config_secret = environ.get('UPDATE_SECRET', True)
+    if secret == config_secret:
+        cv = ResumeSingleton.get_instance()
+        cv.refresh_resume(resume_url)
+        response = {"status": "updated", "resume": cv.resume}
+        json = app.make_response(json_dumps(response, indent=5))
+        json.mimetype = "text/plain"
+        return json
+    else:
+        response = {"status": "unauthorized", "reason": "bad or missing secret"}
+        json = app.make_response(json_dumps(response, indent=5))
+        json.mimetype = "text/plain"
+        return json, 401
 
 
 @myresume.route("/", methods=['GET'])

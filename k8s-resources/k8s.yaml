@@ -31,6 +31,9 @@ spec:
       containers:
       - name: resume
         image: jondkelley/python_resume:latest
+        env:
+          - name: UPDATE_SECRET
+            value: changeme
         ports:
         - name: ssh
           containerPort: 5001

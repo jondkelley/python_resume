@@ -2,6 +2,8 @@ version: '2'
 
 services:
   resume:
+    environment:
+      - UPDATE_SECRET=changeme
     build: .
     container_name: resume
     ports:
