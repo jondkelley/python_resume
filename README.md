@@ -32,15 +32,17 @@ This Git repository serves two purposes:
 
 ### The showcase
 
-Browse this repository to see my skills in Python, Flask, Markdown, and file conversions as well as my resume itself. This also builds cleanly into a `Dockerfile` and can be deployed via `docker-compose` and Kubernetes! This code could be better at mimicking an MIT graduate, but hey I wrote the bulk of this on a Sunday afternoon. C'mon!
+This repository is a showcase around docker, kubernetes, python, flask, markdown, json, REST and sidecars to make a very simple app serve my resume. From `Makefile` to production you'll see how I've deployed my website, and the Flask app I wrote lives in the center of all of this. My flask app even permits [being updated](https://jon-kelley.com/resume/update) from the `resume.json` in this repository after it's been built to make dynamic updates post-deployment easier.
 
 ### My resume
 
-See the interactive live version of this [Jon-Kelley.com](https://jon-kelley.com) powered by Kubernetes!
+See this code live on my website [Jon-Kelley.com](https://jon-kelley.com) 100% powered by Kubernetes!
 
 ### The premise for the project
 
-I wrote this because I was tired of directly maintaining a markdown resume and converting it to DOCX/PDF for recruiters. I figured why not build something that makes my life easier -- the same reason Devops models exist in the first place. I decided to showcase some of my skills in devops while I was at it. Who could ask for a better resume?
+For years I managed a resume in markdown and used pandoc to generate PDF/DOCX files and manually updated my website. Portability and maintainability was always a burden for me. After getting hired I'd sometimes stop paying for hosting and then the code would disappear and I'd have to set everything back up via cronjobs (and redesign my site) when job hunting resumed.
+
+That's why this repository was born! We can dockerize anything, why not my resume? Now I just update `resume.json` and everything can be 100% automatic on top of kubernetes. This actively showcases how devops can help your company or organization focus on what really matters -- and leave the endless toil out of it.
 
 ### Architecture Overview
 
@@ -53,6 +55,10 @@ A simplified component diagram of this architecture is below which should give y
 ![](k8s-architecture.png)
 
 ### Competencies Demonstrated
+
+I believe this project emphasizes core competenencies around writing, containerizing and deploying software.
+
+Some core competencies proven here are:
 
 * Docker
 * docker-compose
