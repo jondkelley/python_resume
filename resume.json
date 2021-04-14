@@ -500,7 +500,7 @@
 	"tools": [],
 	"interests": [],
 	"publications": [{
-			"title": "Building my last resume, ever.",
+			"title": "Building my last resume, ever, in Kubernetes.",
 			"image": "https://media-exp1.licdn.com/dms/image/C4E12AQEwXLG0HDhkTg/article-cover_image-shrink_423_752/0/1618351832121?e=1623888000&v=beta&t=SWDA8kz4dRGpJxQQKvxtmeNtvMED882ekN4rEUslunE",
 			"tags": "#resume #python #flask #pandoc #kubernetes #sidecar #docker-compose",
 			"link": "https://www.linkedin.com/pulse/building-my-last-resume-ever-jonathan-kelley/",
