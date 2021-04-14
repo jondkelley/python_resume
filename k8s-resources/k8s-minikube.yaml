@@ -23,7 +23,7 @@ spec:
           containerPort: 5001
         volumeMounts:
         - name: resume-storage
-          mountPath: /pandoc/
+          mountPath: /pandoc
       - name: pandoc
         image: jondkelley/pandoc_resume:latest
         env:
@@ -31,4 +31,4 @@ spec:
             value: localhost:5001
         volumeMounts:
         - name: resume-storage
-          mountPath: /pandoc/
+          mountPath: /pandoc
