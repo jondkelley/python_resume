@@ -1,0 +1,124 @@
+{
+	"profile": {
+		"first_name": "John",
+		"middle_name": "\"Test\"",
+		"last_name": "Doe",
+		"tagline": "My hipster tagline",
+		"date_of_birth": "1900-01-01",
+		"place_of_birth": "Dallas",
+		"biography": "About me.",
+		"current_location": {
+			"street": "********",
+			"housenumber": 0,
+			"zipcode": "********",
+			"city": "Somewhere",
+			"state": "Someplace",
+			"country": "USA",
+			"planet": "Earth"
+		}
+	},
+	"contact_details": {
+		"email": "user@domain.tld",
+		"phone": "0123-456-789",
+		"skype": "********",
+		"website": "https://jon-kelley.com/",
+		"keybase": "https://keybase.io/jondkelley",
+		"linkedin": "https://linkedin.com/in/jonathandkelley/"
+	},
+	"careers": [{
+			"title": "MegaCorp",
+			"specification": "Codejockey",
+			"location": "Somewhere",
+			"description": "What I did",
+			"accomplishments": [
+				"Patched 10,000 bugs in 2 hours.",
+				"Helped contribute to 10,000% cost savings.",
+				"Reduced AWS costs by $4 million dollars in 1 week."
+			],
+			"start_date": "1902-01-01",
+			"end_date": null,
+			"link": "http://megacorp.local"
+		},
+		{
+			"title": "TinyLLC",
+			"specification": "CodeBarista",
+			"location": "Elsewhere",
+			"description": "A modest job description.",
+			"accomplishments": [
+				"Increased sales by 9,000%",
+				"Reduced build times 40,000% saving 900 million hours of lost productivity per year."
+			],
+			"start_date": "1900-01-01",
+			"end_date": "1902-01-01",
+			"link": "http://tinycorp.local"
+		}
+	],
+	"skills_hypervisors": [{
+			"title": "Hypervisor 1",
+			"level": 5,
+			"endorsement": ""
+		},
+		{
+			"title": "Hypervisor 2",
+			"level": 1,
+			"endorsement": ""
+		}
+	],
+	"skills_devops_tools": [{
+			"title": "Phillips Head",
+			"level": 5,
+			"endorsement": ""
+		},
+		{
+			"title": "Straight Head",
+			"level": 1,
+			"endorsement": ""
+		}
+	],
+	"skills_ci_cd": [{
+			"title": "Jenkins",
+			"level": 5,
+			"endorsement": ""
+		},
+		{
+			"title": "Bamboo",
+			"level": 3,
+			"endorsement": ""
+		}
+	],
+	"skills": [{
+			"title": "Skill 1",
+			"level": 5,
+			"endorsement": ""
+		},
+		{
+			"title": "Skill 2",
+			"level": 4,
+			"endorsement": ""
+		}
+	],
+	"languages": [{
+		"title": "Piglatin",
+		"level": 5,
+		"endorsement": "Daily use"
+	}],
+	"tools": [],
+	"interests": [],
+	"publications": [{
+			"title": "My first blog article.",
+			"image": "https://server.local/me.png",
+			"tags": "#unit #test",
+			"link": "https://google.com/",
+			"slug": "my-first-blog-article",
+			"description": "My very first blog article where I learned how to write a blog!"
+		}
+	],
+	"projects": [{
+			"title": "project_name",
+			"description": "Project description",
+			"tagline": "Flashy tagline",
+			"tags": "Python, Flask",
+			"link": "https://github.com/jondkelley/awesome_project"
+		}
+	]
+}

@@ -16,6 +16,7 @@ This Git repository serves two purposes:
          * [K8s Architecture Overview](#k8s-architecture-overview)
          * [Competencies Demonstrated](#competencies-demonstrated)
       * [Quick Start Guide](#quick-start-guide)
+         * [Unit Tests](#unit-tests)
          * [Run from docker-compose](#run-from-docker-compose)
          * [Kubernetes install](#kubernetes-install)
             * [Install Pod, PVC and Service](#install-pod-pvc-and-service)
@@ -63,6 +64,7 @@ Some core competencies proven here are:
 * Docker
 * docker-compose
 * kubernetes (and sidecars)
+* Unit testing integration
 * Makefile (m4 macro language)
 * Docker build/publish scripts
 * Docker volumes
@@ -77,6 +79,17 @@ Some core competencies proven here are:
 
 ## Quick Start Guide
 
+### Unit Tests
+
+I've provided behavior-driven tests using pydoc. To invoke tests, you can run
+
+```
+# pip required the first time
+pip3 install -r requirements-test.txt
+
+make test
+```
+
 ### Run from docker-compose
 
 This is how I prefer to develop my Docker projects.
@@ -86,6 +99,12 @@ If you have docker-compose installed, you can simply run
 ```
 docker-compose build
 docker-compose up
+```
+
+or, more simply
+
+```
+make run
 ```
 
 Then open [127.0.0.1:5001](http://127.0.0.1:5001).
