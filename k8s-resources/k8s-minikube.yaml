@@ -19,7 +19,7 @@ spec:
       - name: resume
         image: jondkelley/python_resume:latest
         ports:
-        - name: ssh
+        - name: flask
           containerPort: 5001
         volumeMounts:
         - name: resume-storage
