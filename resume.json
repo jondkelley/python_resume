@@ -500,6 +500,13 @@
 	"tools": [],
 	"interests": [],
 	"publications": [{
+			"title": "Building my last resume, ever.",
+			"image": "https://media-exp1.licdn.com/dms/image/C4E12AQEwXLG0HDhkTg/article-cover_image-shrink_423_752/0/1618351832121?e=1623888000&v=beta&t=SWDA8kz4dRGpJxQQKvxtmeNtvMED882ekN4rEUslunE",
+			"tags": "#resume #python #flask #pandoc #kubernetes #sidecar #docker-compose",
+			"link": "https://www.linkedin.com/pulse/building-my-last-resume-ever-jonathan-kelley/",
+			"slug": "building-my-last-resume-ever",
+			"description": "An article about this website, my resume!"
+		},{
 			"title": "Reconnecting after Postgres failover, introductory guide for application developers.",
 			"image": "https://media-exp1.licdn.com/dms/image/C4E12AQHyC8mS7nxmbg/article-cover_image-shrink_423_752/0/1613359421943?e=1621468800&v=beta&t=Upg6leVQs73HdU2XkmBU9rb2TAfb9AZYGNDQk286Hew",
 			"tags": "#posgres #python #failover",
