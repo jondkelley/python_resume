@@ -35,11 +35,13 @@ while(true); do
 
       echo -e "\n\n<br>ContainerId: $(hostname) Load: $(cat /proc/loadavg | awk '{ print $1 , $2 , $3 }')" >> resume.md
 
-      formats="html pdf docx tex epub odt rst man jira ipynb commonmark biblatex bibtex native"
+      formats="html pdf docx epub odt rst man jira ipynb commonmark biblatex bibtex native"
       for format in $formats; do
         echo "EXEC: pandoc -s resume.md -c /tmp/markdown8.css -o /pandoc/resume.$format"
         pandoc --from=markdown --to=$format -s resume.md -c /tmp/markdown8.css -o /pandoc/resume.$format --metadata title=" "
       done
+      # latex output
+      pandoc --from=markdown --to=latex -s resume.md -c /tmp/markdown8.css -o /pandoc/resume.tex --metadata title=" "
       rm resume.md
   popd
   rm -rf $tmp_dir
