@@ -20,6 +20,7 @@ services:
   pandoc:
     environment:
       - MYRESUME_HOST=resume:5001
+      - UPDATE_SECRET=changeme
     build:
       context: pandoc-sidecar
       dockerfile: Dockerfile

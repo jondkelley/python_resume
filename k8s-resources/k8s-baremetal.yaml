@@ -18,6 +18,12 @@ spec:
       containers:
       - name: resume
         image: jondkelley/python_resume:latest
+        env:
+          - name: UPDATE_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: secret-jonk-resume-app
+                key: resume-update-secret
         ports:
         - name: flask
           containerPort: 5001
@@ -29,6 +35,11 @@ spec:
         env:
           - name: MYRESUME_HOST
             value: localhost:5001
+          - name: UPDATE_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: secret-jonk-resume-app
+                key: resume-update-secret
         volumeMounts:
         - name: resume-storage
           mountPath: /pandoc

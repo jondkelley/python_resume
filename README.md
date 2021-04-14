@@ -92,6 +92,13 @@ Then open [127.0.0.1:5001](http://127.0.0.1:5001).
 
 ### Kubernetes install
 
+#### Create app secret
+
+This secret is used to do dynamic updates to resume.json while the application is running.
+```
+kubectl create secret generic secret-jonk-resume-app --from-literal=resume-update-secret=changeme
+```
+
 #### Install Pod, PVC and Service
 
 ```
@@ -99,6 +106,13 @@ kubectl apply -f https://raw.githubusercontent.com/jondkelley/python_resume/mast
 ```
 
 ### Running in minikube
+
+#### Create app secret
+
+This secret is used to do dynamic updates to resume.json while the application is running.
+```
+kubectl create secret generic secret-jonk-resume-app --from-literal=resume-update-secret=changeme
+```
 
 #### Install Pod
 ```
