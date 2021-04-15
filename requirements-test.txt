@@ -1,3 +1,4 @@
 requests
 pytest==6.2.3
+pytest-docker-compose==3.2.1
 pytest-docker-compose
