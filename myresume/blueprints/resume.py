@@ -201,3 +201,8 @@ def download_link(filetype=None):
         return render_template('nofile.html', filename=sourcefile, files=available_files)
     else:
         return render_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+
+
+@myresume.route('/500')
+def internal_server_error():
+    raise Exception('500 error test')

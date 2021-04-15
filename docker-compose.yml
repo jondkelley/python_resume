@@ -2,6 +2,7 @@ version: '2'
 
 services:
   resume:
+    restart: unless-stopped
     environment:
       - UPDATE_SECRET=changeme
     build: .
@@ -18,6 +19,7 @@ services:
     networks:
       - resume_net
   pandoc:
+    restart: unless-stopped
     environment:
       - MYRESUME_HOST=resume:5001
       - UPDATE_SECRET=changeme

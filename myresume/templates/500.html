@@ -1,0 +1,69 @@
+<!---      
+     ____     ___      ___    
+   //       //   ) ) //   ) ) 
+  //__     //   / / //   / /  
+      ) ) //   / / //   / /   
+((___/ / ((___/ / ((___/ /    
+
+Internal server error
+--->
+<head>
+<title>500 internal server error</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(darkblue, black); 
+  height: 100vh;
+  font: normal 10px "Courier New", "Courier", monospace;
+  position: relative;
+}
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(to bottom, rgba(255,255,255,.3) 1px, transparent 2px, rgba(0,0,0,.3) 3px);
+}
+code {
+  display: block;
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  padding: 1rem;
+  filter: drop-shadow(0 0 1px #fff);
+}
+.cursor {
+  animation: cursor-blink 300ms alternate linear infinite;
+}
+@keyframes cursor-blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>
+</head>
+<div id="terminal" contenteditable="true">
+  <div class="overlay"></div>
+  <code>Trying jon-kelley.com...<br>
+    > Connected to jon-kelley.com.<br>
+    > Escape character is '^]'.<br>
+    > GET / http/1.1<br>
+    > Host: jon-kelley.com<br>
+    ><br>
+    > HTTP/1.1 500 Internal Server Error<br>
+    ><br>
+    > Everything is terrible! But it's not your fault. :(
+    <span class="cursor">_</span>
+  </code>
+</div>
+<!--- Select the telnet/curl looking element! --->
+<script>
+	window.addEventListener('load',function(){
+    document.getElementById("terminal").select();
+})
+</script>
+</body>
