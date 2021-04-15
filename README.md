@@ -53,7 +53,7 @@ A simplified component diagram of this architecture is below which should give y
 
 ### K8s Architecture Overview
 
-![](k8s-architecture.png)
+![](detailed_architecture_small.png)
 
 ### Competencies Demonstrated
 
@@ -186,6 +186,6 @@ make push
 
 This Resume was inspired by an interactive dynamic resume created by web designer **[Pascal Van Gemert](http://pascalvangemert.nl/)** ([Github](https://github.com/pascalvgemert/resume)).
 
-I ported his PHP / bootstrap framework over to Python / Flask / Jinja2, with my own inspiration along the way. Then I Dockerized my project and made it work on my bare metal kubernetes cluster using PVC's and MetalLB. Docker-compose is available for local development.
+I ported his PHP / bootstrap framework over to Python / Flask / Jinja2, with my own inspiration along the way. Then I Dockerized my project and made it work on my bare metal kubernetes cluster using emptyDir volumes and MetalLB for load balancing. Docker-compose is available for local development and running the unit tests.
 
-The container is built using a sidecar running pandoc in a bash loop, and a shared PVC to make various rendered resume formats (every 10 seconds) available to the Flask webserver.
+The container is built using a sidecar running pandoc in a bash loop, and uses the emptyDir volume to make various rendered resume formats (every 10 seconds) available to the Flask webserver.
