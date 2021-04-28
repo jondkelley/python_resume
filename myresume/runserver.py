@@ -58,6 +58,7 @@ def app_calculate_age(born):
 
 @app.template_filter('make_slug')
 def app_make_slug(text):
+    """ make a slug for anchor links """
     return make_slug(text)
 
 
@@ -74,8 +75,8 @@ def internal_server_error(e):
 
 
 def main():
-    app.run(host="0.0.0.0", debug=False, port=5001, threaded=True)
+    app.run(host='0.0.0.0', debug=False, port=5001, threaded=True)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
