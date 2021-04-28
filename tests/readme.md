@@ -1,5 +1,7 @@
 # Test Documentation
 
+Run pytest framework with `make test` from make git checkout path. You'll need docker and pytest installed!
+
 | Test File  | Description    |
 |--------------------|---------------------------------------------------------------------|
 | test_downloads.py  | Make sure the download links work from pandoc served thru flask.    |
