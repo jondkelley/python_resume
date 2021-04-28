@@ -77,7 +77,7 @@ class ResumeSingleton:
 resume_instance = ResumeSingleton()
 
 
-@myresume.route("/resume/update", methods=['GET'])
+@myresume.route('/resume/update')
 def update():
     """
     update my resume with newer content from github without requiring full container rebuild
@@ -100,7 +100,7 @@ def update():
         return json, 401
 
 
-@myresume.route("/", methods=['GET'])
+@myresume.route('/')
 def home():
     """
     home page
@@ -111,17 +111,17 @@ def home():
     return render_template('index.html', resume=cv.resume)
 
 
-@myresume.route("/terminal")
+@myresume.route('/terminal')
 def term():
     """
-    terminal iframe
+    terminal iframe page
     """
     return render_template('term.html')
 
 
 def generate_markdown():
     """
-    generate resume in markdown format
+    generate resume in markdown
     """
     cv = ResumeSingleton.get_instance()
     jinja2.filters.FILTERS['resume_date'] = filter_resume_date
@@ -133,22 +133,22 @@ def generate_markdown():
     return markdown
 
 
-@myresume.route("/resume.md/")
-@myresume.route("/resume.md")
+@myresume.route('/resume.md/')
+@myresume.route('/resume.md')
 def resume_markdown():
     """
-    generates a raw markdown document from resume
+    generates a raw markdown resume
     """
     response = make_response(generate_markdown(), 200)
     response.mimetype = "text/plain"
     return response
 
 
-@myresume.route("/resume.md/render/theme/<theme>")
-@myresume.route("/resume.md/render")
+@myresume.route('/resume.md/render/theme/<theme>')
+@myresume.route('/resume.md/render')
 def resume_markdown_theme(theme='3'):
     """
-    generates a rendered markdown document from resume theme
+    generates a *rendered* markdown themed resume, defaults to theme 3
     """
     cv = ResumeSingleton.get_instance()
     resume = cv.resume
@@ -160,7 +160,7 @@ def resume_markdown_theme(theme='3'):
     return f'{header}\n\n{preface}{html_body}'
 
 
-@myresume.route("/resume.json")
+@myresume.route('/resume.json')
 def resume_json():
     """
     return resume in pretty JSON
@@ -190,7 +190,7 @@ def render_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name):
 @myresume.route('/pandoc/resume.<filetype>')
 def download_link(filetype=None):
     """
-    loads a resume off the pandoc shared docker volume
+    download a resume from the pandoc shared docker volume
     """
     sourcefile_path = '/pandoc/'
     name = 'jonathan_d_kelley'
@@ -205,4 +205,7 @@ def download_link(filetype=None):
 
 @myresume.route('/500')
 def internal_server_error():
+    """
+    raise exception to display 500 error page
+    """
     raise Exception('500 error test')
