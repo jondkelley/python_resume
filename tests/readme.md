@@ -1,4 +1,4 @@
-| Filename  | Description    |   |   |   |
+| Filename  | Description    |
 |--------------------|---------------------------------------------------------------------|
 | test_downloads.py  | Make sure the download links work from pandoc served thru flask.    |
 | test_errorpages.py | Test expected error pages work                                      |
