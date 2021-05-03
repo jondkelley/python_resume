@@ -11,7 +11,7 @@ This Git repository serves two purposes:
       * [Introduction](#introduction)
          * [The showcase](#the-showcase)
          * [My resume](#my-resume)
-         * [The premise for the project](#the-premise-for-the-project)
+         * [Why?](#why)
          * [Architecture Overview](#architecture-overview)
          * [K8s Architecture Overview](#k8s-architecture-overview)
          * [Competencies Demonstrated](#competencies-demonstrated)
@@ -39,11 +39,11 @@ This repository is a showcase around docker, kubernetes, python, flask, markdown
 
 See this code live on my website [Jon-Kelley.com](https://jon-kelley.com) 100% powered by Kubernetes!
 
-### The premise for the project
+### Why
 
-For years I managed a resume in markdown and used pandoc to generate PDF/DOCX files and manually updated my website. Portability and maintainability was always a burden for me. After getting hired I'd sometimes stop paying for hosting and then the code would disappear and I'd have to set everything back up via cronjobs (and redesign my site) when job hunting resumed.
+Having a resume for years in Markdown as data format and converting to PDF/DOCX etc using Pandoc grew tiring over the years. Portability and maintainability was always a concern.
 
-That's why this repository was born! We can dockerize anything, why not my resume? Now I just update `resume.json` and everything can be 100% automatic on top of kubernetes. This actively showcases how devops can help your company or organization focus on what really matters -- and leave the endless toil out of it.
+Now I'm storing all my experience in a JSON file and just letting code handle the rest. We can dockerize anything, why not my our resume? Now I update `resume.json` and use the eventual consistency model for my resume.
 
 ### Architecture Overview
 
