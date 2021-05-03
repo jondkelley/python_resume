@@ -84,7 +84,6 @@ Some core competencies proven here are:
 I've provided behavior-driven tests using pydoc. To invoke tests, you can run
 
 ```
-# pip required the first time
 pip3 install -r requirements-test.txt
 
 make test
