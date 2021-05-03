@@ -2,8 +2,8 @@
 
 This Git repository serves two purposes:
 
-* A) to render my resume in HTML(5) / Bootstrap / Markdown / PDF / DOCX
-* B) to showcase my skills as a "Devops Engineer" by building this piece of engineering with (mostly) best practices.
+* Store my resume in HTML(5) / Bootstrap / Markdown / PDF / DOCX
+* Showcase my skills as "Devops Engineer" by building a piece of automated engineering that utilize several languages, containers, and technology stacks together.
 
 # Table of Contents
 
