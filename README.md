@@ -3,7 +3,22 @@
 This Git repository serves two purposes:
 
 * Store my resume in HTML(5) / Bootstrap / Markdown / PDF / DOCX
-* Showcase my skills as "Devops Engineer" by building a piece of automated engineering that utilize several languages, containers, and technology stacks together.
+* Showcase some skill as "Devops Engineer" by building a piece of automated engineering that utilize several languages, containers, and technology stacks together.
+  * Docker
+  * docker-compose
+  * kubernetes (and sidecars)
+  * Unit testing integration
+  * Makefile (m4 macro language)
+  * Docker build/publish scripts
+  * Docker volumes
+  * Python3
+  * Flask
+  * BASH
+  * Jinja2
+  * Pandoc
+  * HTML5, Jquery, CSS, and Bootstrap
+  * Software integration
+  * Great docs
 
 # Table of Contents
 
@@ -14,7 +29,6 @@ This Git repository serves two purposes:
          * [Why?](#why)
          * [Architecture Overview](#architecture-overview)
          * [K8s Architecture Overview](#k8s-architecture-overview)
-         * [Competencies Demonstrated](#competencies-demonstrated)
       * [Quick Start Guide](#quick-start-guide)
          * [Unit Tests](#unit-tests)
          * [Run from docker-compose](#run-from-docker-compose)
@@ -54,28 +68,6 @@ A simplified component diagram of this architecture is below which should give y
 ### K8s Architecture Overview
 
 ![](detailed_architecture_small.png)
-
-### Competencies Demonstrated
-
-I believe this project emphasizes core competenencies around writing, containerizing and deploying software.
-
-Some core competencies proven here are:
-
-* Docker
-* docker-compose
-* kubernetes (and sidecars)
-* Unit testing integration
-* Makefile (m4 macro language)
-* Docker build/publish scripts
-* Docker volumes
-* Python3
-* Flask
-* BASH
-* Jinja2
-* Pandoc
-* HTML5, Jquery, CSS, and Bootstrap
-* Software integration
-* Good documentation
 
 ## Quick Start Guide
 
