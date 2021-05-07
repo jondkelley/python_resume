@@ -1,6 +1,21 @@
 version: '2'
 
 services:
+  jenkins:
+    restart: unless-stopped
+    environment:
+      - PLUGIN_MANAGER_TOOL_VERSION=1.1.0
+      - JENKINS_VERSION=2.240
+    image: jondkelley/demo-jenkins-config-as-code:latest
+    container_name: jenkins
+    ports:
+      - 8080:8080
+    volumes:
+      - ./.jenkins/init_scripts/groovy/scripts/SystemFolder.groovy:/usr/share/jenkins/ref/init.groovy.d/jondkelley_resume.groovy
+      - maven-repo:/root/.m2
+    restart: always
+    networks:
+      - resume_net
   resume:
     restart: unless-stopped
     environment:
@@ -34,7 +49,9 @@ services:
       - resume_net
 
 volumes:
-     app-volume:
+    maven-repo:
+      driver: local
+    app-volume:
 
 networks:
   resume_net:
