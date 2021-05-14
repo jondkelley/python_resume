@@ -67,7 +67,7 @@
 				"Built Doximity's first platform under k8s on EKS with Istio using Ansible, Terraform and Helm charts.",
 				"Configured Sensu monitoring scripts for production systems.",
 				"Moved Jenkins jobs from traditional EC2 swarm builders over to ECS based pipelines for better resource utilization / cost saving.",
-				"Built Jenkins automation for Chef jobs using Jenkins Job Builder.",
+				"Built Jenkins automation for Chef jobs using Jenkins Job Builder, and later helped implement JCasC and managed job creation using sandboxed Groovy scripts.",
 				"Wrote / manage cookbooks in Chef as well as the dependencies for patch management and better inspect testing / kitchen tests.",
 				"Built ansible/terraform based deployment system for Kubernetes and Istio onto EKS so the entire Doximity platform could be migrated.",
 				"Refactored Terraform across teams using multiple statefiles using both Jenkins pipelines and Atlantis. Migrated systems to modules rather then sprawled HCL resources."
