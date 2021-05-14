@@ -3,7 +3,7 @@
 This Git repository serves two purposes:
 
 * Backup of my resume for development and rapid deployment
-* Showcased some skill as a "Devops Engineer":
+* Showcases my skill as a "Devops Engineer":
   * Docker
   * docker-compose
   * kubernetes (and sidecars)
