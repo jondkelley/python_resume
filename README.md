@@ -47,7 +47,7 @@ This Git repository serves two purposes:
 
 ### The showcase
 
-This repository is a showcase around docker, kubernetes, python, flask, markdown, json, REST and sidecars to make a very simple app serve my resume. From `Makefile` to production you'll see how I've deployed my website, and the Flask app I wrote lives in the center of all of this. My flask app even permits [being updated](https://jon-kelley.com/resume/update) from the `resume.json` in this repository after it's been built to make dynamic updates post-deployment easier.
+This repository is a showcase around docker, kubernetes, python, flask, markdown, json, REST and sidecars to make a very simple app serve my resume. From `Makefile` to production you'll see how I've deployed my website, and the Flask app I wrote is the centerpiece here. My flask app permits [being updated](https://jon-kelley.com/resume/update) from the `resume.json` in this repository after it's been built to make dynamic updates post-deployment easier.
 
 ### My resume
 
@@ -55,9 +55,9 @@ See this code live on my website [Jon-Kelley.com](https://jon-kelley.com) 100% p
 
 ### Why
 
-Having a resume for years in Markdown as data format and converting to PDF/DOCX etc using Pandoc grew tiring over the years. Portability and maintainability was always a concern.
+Having a resume for years in Markdown as data format and converting to PDF/DOCX etc using Pandoc got old and tiring. Portability and maintainability has long been a dream so that resume management isn't a drain.
 
-Now I'm storing all my experience in a JSON file and just letting code handle the rest. We can dockerize anything, why not my our resume? Now I update `resume.json` and use the eventual consistency model for my resume.
+Now I store all my experience in a JSON file and just let code handle the rest. We can dockerize anything, why not my the resume? Now I update `resume.json` and with eventual consistency, all things resume align.
 
 ### Architecture Overview
 
