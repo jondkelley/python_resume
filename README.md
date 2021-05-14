@@ -2,8 +2,8 @@
 
 This Git repository serves two purposes:
 
-* Store my resume in HTML(5) / Bootstrap / Markdown / PDF / DOCX
-* Showcased skill as "Devops Engineer":
+* Backup of my resume for development and rapid deployment
+* Showcased some skill as a "Devops Engineer":
   * Docker
   * docker-compose
   * kubernetes (and sidecars)
