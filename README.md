@@ -57,7 +57,7 @@ See this code live on my website [Jon-Kelley.com](https://jon-kelley.com) 100% p
 
 Having a resume for years in Markdown as data format and converting to PDF/DOCX etc using Pandoc got old and tiring. Portability and maintainability has long been a dream so that resume management isn't a drain.
 
-Now I store all my experience in a JSON file and just let code handle the rest. We can dockerize anything, why not my the resume? Now I update `resume.json` and with eventual consistency, all things resume align.
+Now I store all my experience in a JSON file and just let code handle the rest. We can dockerize anything, why not a resume? Now I update `resume.json` and with eventual consistency, all things resume align.
 
 ### Architecture Overview
 
