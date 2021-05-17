@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  selector:
+    matchLabels:
+      app: jonk-resume-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jonk-resume-app
+    spec:
+      volumes:
+      - name: resume-storage
+        emptyDir: {}
+      containers:
+      - name: resume
+        image: jondkelley/python_resume:latest
+        env:
+          - name: UPDATE_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: secret-jonk-resume-app
+                key: resume-update-secret
+        ports:
+        - name: flask
+          containerPort: 5001
+        volumeMounts:
+        - name: resume-storage
+          mountPath: /pandoc
+      - name: pandoc
+        image: jondkelley/pandoc_resume:latest
+        env:
+          - name: MYRESUME_HOST
+            value: localhost:5001
+          - name: UPDATE_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: secret-jonk-resume-app
+                key: resume-update-secret
+        volumeMounts:
+        - name: resume-storage
+          mountPath: /pandoc
