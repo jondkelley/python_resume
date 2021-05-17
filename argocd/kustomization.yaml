@@ -4,5 +4,6 @@ kind: Kustomization
 namePrefix: jonk-resume-
 
 resources:
+- resume-secret.yaml
 - resume-deployment.yaml
 - resume-service.yaml
