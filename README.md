@@ -1,3 +1,5 @@
+![Pyunit Coverage Badge](https://github.com/jondkelley/python_resume/actions/workflows/push.yaml/badge.svg?branch=master)
+
 # Resume - Jonathan D Kelley - jon-kelley.com
 
 This Git repository serves two purposes:
