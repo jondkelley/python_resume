@@ -12,7 +12,8 @@ def test_resume_update_endpoint_security(wait_for_flask, update_secret):
     assert rjson['status'] == 'updated'
 
 
-def test_resume_update_endpoint_security_unauthorized(wait_for_flask, update_secret):
+def test_resume_update_endpoint_security_unauthorized(
+        wait_for_flask, update_secret):
     """
     ensure resume.json update security works when an INVALID_SECRET is provided
     """

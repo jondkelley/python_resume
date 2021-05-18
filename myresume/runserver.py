@@ -19,7 +19,7 @@ app.register_blueprint(myresume)
 
 @app.template_filter('urlsafe_base64')
 def urlsafe_base64_encode(s):
-    if type(s) == 'Markup':
+    if isinstance(s, 'Markup'):
         s = s.unescape()
     s = base64.urlsafe_b64encode(s.encode("utf8"))
     return Markup(s.decode("utf8"))
