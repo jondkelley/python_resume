@@ -1,0 +1,13 @@
+name: Pyunit Test Coverage
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install test requirements
+        run: pip3 install requests pytest==6.2.3 pytest-docker-compose==3.2.1
+      - name: Run tests
+        run: make test
+        env:
+          CI_TEST: "true"

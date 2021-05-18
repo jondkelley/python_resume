@@ -1,10 +1,18 @@
+.PHONY : run test test_up test_run test_down build push
+
 run:
 	docker-compose up
 
-test:
-	docker-compose up -d; \
+test: test_up test_run test_down
+
+test_up:
+	docker-compose up -d
+
+test_run:
 	export UPDATE_SECRET=`grep UPDATE_SECRET docker-compose.yml  | head -1 | awk '{ print $2 }' | cut -d'=' -f2`; \
-	pytest --docker-compose-no-build --use-running-containers; \
+	pytest --docker-compose-no-build --use-running-containers;
+
+test_down:
 	docker-compose down
 
 build:

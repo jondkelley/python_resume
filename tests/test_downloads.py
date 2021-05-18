@@ -1,6 +1,11 @@
 
 from requests import get
+from os import environ
+from time import sleep
 
+if environ.get('CI_TEST'):
+    # Give pandoc time to generate
+    sleep(30)
 
 class TestDownloads():
     """
