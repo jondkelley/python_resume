@@ -1,9 +1,9 @@
 ![](https://img.shields.io/badge/-green?style=social&logo=kubernetes)
 ![](https://img.shields.io/badge/-green?style=social&logo=python)
 ![](https://img.shields.io/badge/-green?style=social&logo=flask)
-![Pyunit Coverage badge](https://github.com/jondkelley/python_resume/actions/workflows/pyunit.yaml/badge.svg?branch=master)
-![Valid resume.json badge](https://github.com/jondkelley/python_resume/actions/workflows/json_lint.yaml/badge.svg?branch=master)
-![Python PEP8 badge](https://github.com/jondkelley/python_resume/actions/workflows/autopep8.yaml/badge.svg?branch=master)
+[![Pyunit Coverage badge](https://github.com/jondkelley/python_resume/actions/workflows/pyunit.yaml/badge.svg?branch=master)](https://github.com/jondkelley/python_resume/actions/workflows/pyunit.yaml)
+[![Valid resume.json badge](https://github.com/jondkelley/python_resume/actions/workflows/json_lint.yaml/badge.svg?branch=master)](https://github.com/jondkelley/python_resume/actions/workflows/json_lint.yaml)
+[![Python PEP8 badge](https://github.com/jondkelley/python_resume/actions/workflows/autopep8.yaml/badge.svg?branch=master)](https://github.com/jondkelley/python_resume/actions/workflows/autopep8.yaml)
 
 # Resume - Jonathan D Kelley - jon-kelley.com
 
