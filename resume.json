@@ -501,6 +501,14 @@
       "title": "Building my last resume, ever, in Kubernetes.",
       "image": "https://media-exp1.licdn.com/dms/image/C4E12AQEwXLG0HDhkTg/article-cover_image-shrink_423_752/0/1618351832121?e=1623888000&v=beta&t=SWDA8kz4dRGpJxQQKvxtmeNtvMED882ekN4rEUslunE",
       "tags": "#resume #python #flask #pandoc #kubernetes #sidecar #docker-compose",
+      "link": "https://github.com/jondkelley/demo-jenkins-config-as-code",
+      "slug": "demo-jenkins-c",
+      "description": "An article about this website, my resume!"
+    },
+    {
+      "title": "Building my last resume, ever, in Kubernetes.",
+      "image": "https://media-exp1.licdn.com/dms/image/C4E12AQEwXLG0HDhkTg/article-cover_image-shrink_423_752/0/1618351832121?e=1623888000&v=beta&t=SWDA8kz4dRGpJxQQKvxtmeNtvMED882ekN4rEUslunE",
+      "tags": "#resume #python #flask #pandoc #kubernetes #sidecar #docker-compose",
       "link": "https://www.linkedin.com/pulse/building-my-last-resume-ever-jonathan-kelley/",
       "slug": "building-my-last-resume-ever",
       "description": "An article about this website, my resume!"
@@ -530,6 +538,12 @@
     }
   ],
   "projects": [{
+      "title": "python_resume",
+      "description": "A showcase of Jenkins configurations and job creation out of the box. Using groovy and the configuration as code plugin, you can create fully viable Jenkins instances on docker.",
+      "tagline": "A showcase of Jenkins configurations and jobs out of the box",
+      "tags": "Jenkins, Groovy, Configuration-as-code",
+      "link": "https://github.com/jondkelley/demo-jenkins-config-as-code"
+    },{
       "title": "python_resume",
       "description": "A showcase of Python/Flask/Jinja2/HTML(5)/Bootstrap/JQuery used to both generate jon-kelley.com and my hardcopy resume.",
       "tagline": "The backend code for this website!",
