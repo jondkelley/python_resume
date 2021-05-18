@@ -1,4 +1,4 @@
-name: Pyunit Test Coverage
+name: Pyunit Coverage
 on: push
 jobs:
   test:

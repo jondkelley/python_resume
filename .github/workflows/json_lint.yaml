@@ -1,4 +1,4 @@
-name: resume.json valid
+name: Valid resume.json
 on: push
 jobs:
   test:

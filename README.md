@@ -1,5 +1,6 @@
-![Pyunit Coverage Badge](https://github.com/jondkelley/python_resume/actions/workflows/push.yaml/badge.svg?branch=master)
-![Resume.json JSON Valid Badge](https://github.com/jondkelley/python_resume/actions/workflows/json_lint.yaml/badge.svg?branch=master)
+![Pyunit Coverage badge](https://github.com/jondkelley/python_resume/actions/workflows/pyunit.yaml/badge.svg?branch=master)
+![Valid resume.json badge](https://github.com/jondkelley/python_resume/actions/workflows/json_lint.yaml/badge.svg?branch=master)
+![Python PEP8 badge](https://github.com/jondkelley/python_resume/actions/workflows/autopep8.yaml/badge.svg?branch=master)
 
 # Resume - Jonathan D Kelley - jon-kelley.com
 
