@@ -7,6 +7,7 @@ if environ.get('CI_TEST'):
     # Give pandoc time to generate
     sleep(30)
 
+
 class TestDownloads():
     """
     verifies to make sure the pandoc container is generating resumes,
