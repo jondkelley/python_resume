@@ -10,7 +10,7 @@ This Git repository serves two purposes:
   * Unit testing integration
   * Makefile (m4 macro language)
   * Docker build/publish scripts
-  * Docker volumes
+  * K8s Volumes
   * Python3
   * Flask
   * BASH
