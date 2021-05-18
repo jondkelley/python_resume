@@ -1,4 +1,5 @@
 ![Pyunit Coverage Badge](https://github.com/jondkelley/python_resume/actions/workflows/push.yaml/badge.svg?branch=master)
+![Resume.json JSON Valid Badge](https://github.com/jondkelley/python_resume/actions/workflows/json_lint.yaml/badge.svg?branch=master)
 
 # Resume - Jonathan D Kelley - jon-kelley.com
 
