@@ -538,9 +538,9 @@
     }
   ],
   "projects": [{
-      "title": "python_resume",
+      "title": "demo-jenkins-config-as-code",
       "description": "A showcase of Jenkins configurations and job creation out of the box. Using groovy and the configuration as code plugin, you can create fully viable Jenkins instances on docker.",
-      "tagline": "A showcase of Jenkins configurations and jobs out of the box",
+      "tagline": "Jenkins configurations and job creation right out of the box.",
       "tags": "Jenkins, Groovy, Configuration-as-code",
       "link": "https://github.com/jondkelley/demo-jenkins-config-as-code"
     },{
