@@ -36,7 +36,7 @@ class ResumeSingleton:
         """
         return singleton instance
         """
-        if ResumeSingleton.__instance == None:
+        if ResumeSingleton.__instance is None:
             ResumeSingleton()
         return ResumeSingleton.__instance
 
@@ -60,7 +60,7 @@ class ResumeSingleton:
         """
         private constructor
         """
-        if ResumeSingleton.__instance != None:
+        if ResumeSingleton.__instance is not None:
             raise Exception(
                 "This class is a singleton, don't use parenthesis!")
         else:
@@ -129,7 +129,9 @@ def generate_markdown():
     env = jinja2.Environment(loader=jinja2.FileSystemLoader("/resume/"))
     template = env.get_template("resume.md.jinja2")
     markdown = template.render(
-        resume=cv.resume, current_timestamp_utc=get_current_datetime(), uuid=uuid4())
+        resume=cv.resume,
+        current_timestamp_utc=get_current_datetime(),
+        uuid=uuid4())
     return markdown
 
 
@@ -198,9 +200,13 @@ def download_link(filetype=None):
 
     if not path.exists(sourcefile):
         _, _, available_files = next(walk(sourcefile_path))
-        return render_template('nofile.html', filename=sourcefile, files=available_files)
+        return render_template(
+            'nofile.html',
+            filename=sourcefile,
+            files=available_files)
     else:
-        return render_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name)
+        return render_from_pandoc_dir(
+            sourcefile_path, sourcefile, filetype, name)
 
 
 @myresume.route('/500')

@@ -21,13 +21,13 @@ def get_current_datetime():
 
 def split_list_one(a_list):
     """ takes a list and returns the first half """
-    half = len(a_list)//2
+    half = len(a_list) // 2
     return a_list[:half]
 
 
 def split_list_two(a_list):
     """ takes a list and returns the second half """
-    half = len(a_list)//2
+    half = len(a_list) // 2
     return a_list[half:]
 
 
