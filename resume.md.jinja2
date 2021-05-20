@@ -22,7 +22,7 @@
 
 {{ job['start_date'] | resume_date }} - {{ job['end_date'] | resume_date }}
 {% if job['accomplishments'] -%}
-{%- for bullet in job['accomplishments'][:4] %}
+{%- for bullet in job['accomplishments'][:5] %}
 * {{ bullet}}
 {% endfor -%}
 {%- endif -%}

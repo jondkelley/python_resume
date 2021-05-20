@@ -44,13 +44,13 @@
       "accomplishments": [
         "Assists the production SRE team during incidents and outages with investigation of k8s stack / node failures on IBM.",
         "Expanding access tools to internal CLI python client (logdnactl) for better integration into backend systems for the SRE team.",
+        "Regularly contributes to our internal tooling which uses the k8s api and pymongo libraries to manage administrative operations across the product.",
         "Built a support dashboard for support to manage and integrated Flask/Rebrow Redis blueprints into the app along with Python-eve (REST toolkit) for full-search MongoORM via REST. All behind python-authlib and OpenIDConnect/Okta for RBAC.",
         "Re-wrote the ansible integration for LogDNA logging library for a variety of new features for our customers.",
         "Added functionality to support dashboard to look into ElasticSearch field mappings to troubleshoot index limits and indicate growth needs for customers.",
         "Developed a proxy request tool for webhooks so support can easily debug webhook payloads.",
         "Rebuilt Ansible-logdna handler in Python (git: logdna/ansible-logdna PR #8) to improve functionality and modernize the framework.",
         "Developed a proxy request tool for support to debug webhook payloads, a bit more purpose oriented than netcat .",
-        "Regularly contributes to our internal tooling logdnactl which uses the k8s api and pymongo libraries to manage administrative operations across the product.",
         "Helps take senior escalations for k8s agent, logstash, IBM Cloudfoundry, logspout and other products."
       ],
       "start_date": "2020-06-01",
@@ -65,12 +65,12 @@
       "description": "Worked in a cross-discipline devops team managing everything from Kubernetes via terraform infrastructure-as-code to Chef on ec2 instances. Used best security practices in a strict HIPAA environment with segmented networks and RBAC/IAM policies on AWS.",
       "accomplishments": [
         "Built Doximity's first platform under k8s on EKS with Istio using Ansible, Terraform and Helm charts.",
+        "Refactored Terraform across teams using multiple statefiles using both Jenkins pipelines and Atlantis. Migrated to terraform module patterns rather then sprawled HCL resources.",
         "Configured Sensu monitoring scripts for production systems.",
+        "Wrote / manage cookbooks in Chef as well as the dependencies for patch management and better inspect testing / kitchen tests.",
         "Moved Jenkins jobs from traditional EC2 swarm builders over to ECS based pipelines for better resource utilization / cost saving.",
         "Built Jenkins automation for Chef jobs using Jenkins Job Builder, and later helped implement JCasC and managed job creation using sandboxed Groovy scripts.",
-        "Wrote / manage cookbooks in Chef as well as the dependencies for patch management and better inspect testing / kitchen tests.",
-        "Built ansible/terraform based deployment system for Kubernetes and Istio onto EKS so the entire Doximity platform could be migrated.",
-        "Refactored Terraform across teams using multiple statefiles using both Jenkins pipelines and Atlantis. Migrated systems to modules rather then sprawled HCL resources."
+        "Built ansible/terraform based deployment system for Kubernetes and Istio onto EKS so the entire Doximity platform could be migrated."
       ],
       "start_date": "2019-05-01",
       "end_date": "2020-05-01",
@@ -140,7 +140,6 @@
       "description": "Worked on the openstack / cloud servers as a systems administrator supporting the Rackspace Cloud Control panel and backend systems.",
       "accomplishments": [
         "Works closely with Cloud integration teams running deployment and maintenance on large-scale backend infrastructure used for the world's 2nd largest Public Cloud.",
-        "7+ years hands-on experience with Linux (Redhat/Debian)",
         "Expertise diagnosing complex Linux application and system problems.",
         "Updates and writes deployment templates and syntax for Puppet/Chef",
         "Subject matter expert and senior support escalation for Cloud Load Balancers, Cloud Databases, Cloud Compute and infrastructure.",
@@ -182,11 +181,11 @@
       "level": "Full Time",
       "description": "Performed Linux technical support by phone / tickets. Did professional service migrations, hardware upgrades, cabinet wiring, and performed network maintenence in the datacenter on Cisco Catalyst 6500 series hardware. Supported Cpanel and Flesk control panels.",
       "accomplishments": [
+        "Planned and executed primary data-center DNS cut-over to use new BIND stack with Linux HEARTBEAT fail-over. Wrote fail-over scripts to handle system failure with zero downtime in DNS lookups.",
         "Performed phone and ticket work to meet customer SLA.",
         "Managed OS patching, migrations, and upgrades as professional services to customers.",
         "Worked as DC OPS managing hardware diagnostics, upgrades and provisioning.",
         "Worked as DC network operations handling switch upgrades, troubleshooting, DDoS mitigation or disaster recovery.",
-        "Planned and executed primary data-center DNS cut-over to use new BIND stack with Linux HEARTBEAT fail-over. Wrote fail-over scripts to handle system failure with zero downtime in DNS lookups.",
         "Diagnosed routing and other concerns escalating to network operations when required.",
         "Upgraded Nagios monitoring to latest version and scaled for performance.",
         "Upgraded MRTG graphing system for Cataylst switch monitoring to improve bandwidth graph capability.",
@@ -512,7 +511,7 @@
       "link": "https://www.linkedin.com/pulse/building-my-last-resume-ever-jonathan-kelley/",
       "slug": "building-my-last-resume-ever",
       "description": "An article about this website, my resume!"
-    },{
+    }, {
       "title": "Reconnecting after Postgres failover, introductory guide for application developers.",
       "image": "https://media-exp1.licdn.com/dms/image/C4E12AQHyC8mS7nxmbg/article-cover_image-shrink_423_752/0/1613359421943?e=1621468800&v=beta&t=Upg6leVQs73HdU2XkmBU9rb2TAfb9AZYGNDQk286Hew",
       "tags": "#posgres #python #failover",
@@ -543,7 +542,7 @@
       "tagline": "Jenkins configurations and job creation right out of the box.",
       "tags": "Jenkins, Groovy, Configuration-as-code",
       "link": "https://github.com/jondkelley/demo-jenkins-config-as-code"
-    },{
+    }, {
       "title": "python_resume",
       "description": "A showcase of Python/Flask/Jinja2/HTML(5)/Bootstrap/JQuery used to both generate jon-kelley.com and my hardcopy resume.",
       "tagline": "The backend code for this website!",
