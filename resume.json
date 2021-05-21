@@ -498,14 +498,14 @@
   "interests": [],
   "publications": [{
       "title": "Building my last resume, ever, in Kubernetes.",
-      "image": "https://media-exp1.licdn.com/dms/image/C4E12AQEwXLG0HDhkTg/article-cover_image-shrink_423_752/0/1618351832121?e=1623888000&v=beta&t=SWDA8kz4dRGpJxQQKvxtmeNtvMED882ekN4rEUslunE",
+      "image": "https://i.imgur.com/QPqUbnW.png",
       "tags": "#resume #python #flask #pandoc #kubernetes #sidecar #docker-compose",
       "link": "https://www.linkedin.com/pulse/building-my-last-resume-ever-jonathan-kelley/",
       "slug": "building-my-last-resume-ever",
       "description": "An article about this website, my resume!"
     }, {
       "title": "Reconnecting after Postgres failover, introductory guide for application developers.",
-      "image": "https://media-exp1.licdn.com/dms/image/C4E12AQHyC8mS7nxmbg/article-cover_image-shrink_423_752/0/1613359421943?e=1621468800&v=beta&t=Upg6leVQs73HdU2XkmBU9rb2TAfb9AZYGNDQk286Hew",
+      "image": "https://i.imgur.com/WtR5iHd.png",
       "tags": "#posgres #python #failover",
       "link": "https://www.linkedin.com/pulse/reconnecting-after-postgres-failover-guide-developer-jonathan-kelley/",
       "slug": "reconnecting-after-postgres-failover-guide",
@@ -513,7 +513,7 @@
     },
     {
       "title": "Error Handling from backends to the frontend!",
-      "image": "https://media-exp1.licdn.com/dms/image/C4E12AQEWm0XZRpMiyw/article-cover_image-shrink_720_1280/0/1612056853933?e=1621468800&v=beta&t=G-Tiq13CVsw0CLniVXMCoq2HVPglch9q2ABRA9EdBqo",
+      "image": "https://i.imgur.com/b8sDiqi.jpg",
       "tags": "#exceptions #stacktrace #frontend #backend",
       "link": "https://www.linkedin.com/pulse/error-handling-tips-from-backend-your-frontend-jonathan-kelley/",
       "slug": "error-handling-tips-from-backend-your-frontend",
@@ -521,7 +521,7 @@
     },
     {
       "title": "How to design subnets the right way",
-      "image": "https://media-exp1.licdn.com/dms/image/C4E12AQHhNqoNc10d1A/article-cover_image-shrink_720_1280/0/1611863028299?e=1621468800&v=beta&t=NVc7AAc7WxXTHEpGsJ707coF-y7TA5ANLWZHwJU2Yxo",
+      "image": "https://i.imgur.com/Dp1BRVR.png",
       "tags": "#subnet #networking #vpc #vlan #dnat #snat",
       "link": "https://www.linkedin.com/pulse/how-design-subnets-right-way-jonathan-kelley/",
       "slug": "how-design-subnets-right-way",
