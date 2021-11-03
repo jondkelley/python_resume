@@ -14,7 +14,8 @@ services:
       # to allow for local modifications and real-time development
       - ./resume.json:/resume/resume.json
       - ./resume.md.jinja2:/resume/resume.md.jinja2
-      - app-volume:/pandoc
+      - ./appvolume:/pandoc:Z
+      #- app-volume:/pandoc:Z ## these types of volumes don't work with secured containers
     restart: always
     networks:
       - resume_net
@@ -28,7 +29,8 @@ services:
       dockerfile: Dockerfile
     container_name: pandoc
     volumes:
-      - app-volume:/pandoc
+      - ./appvolume:/pandoc:Z
+      #- app-volume:/pandoc:Z ## these types of volumes don't work with secured containers
     restart: always
     networks:
       - resume_net

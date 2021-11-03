@@ -12,6 +12,8 @@ spec:
       labels:
         app: jonk-resume-app
     spec:
+      securityContext:
+        runAsUser: 15000
       volumes:
       - name: resume-storage
         emptyDir: {}
