@@ -120,7 +120,7 @@ kubectl create secret generic secret-jonk-resume-app --from-literal=resume-updat
 #### Install Pod, PVC and Service
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/jondkelley/python_resume/master/k8s-resources/k8s-baremetal.yaml
+kubectl apply -f https://raw.githubusercontent.com/jondkelley/python_resume/master/deployments/baremetal/resources.yaml
 ```
 
 ### Running in minikube
@@ -134,7 +134,7 @@ kubectl create secret generic secret-jonk-resume-app --from-literal=resume-updat
 
 #### Install Pod
 ```
-kubectl apply -f https://raw.githubusercontent.com/jondkelley/python_resume/master/k8s-resources/k8s-minikube.yaml
+kubectl apply -f https://raw.githubusercontent.com/jondkelley/python_resume/master/deployments/minikube/resources.yaml
 ```
 
 #### Expose Service
