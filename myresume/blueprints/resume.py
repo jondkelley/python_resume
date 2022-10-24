@@ -184,7 +184,9 @@ def render_from_pandoc_dir(sourcefile_path, sourcefile, filetype, name):
         file = outfile.read()
         return send_file(
             io.BytesIO(file),
-            attachment_filename=f'resume.{filetype}',
+            download_name=f'resume.{filetype}',
+            #attachment_filename=f'resume.{filetype}',
+            # https://github.com/pallets/flask/issues/4753
             mimetype=mimetype
         )
 

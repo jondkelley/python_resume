@@ -23,7 +23,8 @@ if __name__ == "__main__":
         include_package_data=True,
         package_dir={NAME: NAME},
         description="myresume - Interactive online resume for jon-kelley.com",
-        install_requires=['Flask==2.1.0', 'python-slugify', 'markdown', 'Jinja2==3.0.3', 'werkzeug==2.0.2'],
+        install_requires=['Flask==2.2.2', 'markdown', 'python-slugify'],
+###, 'python-slugify', 'markdown', 'Jinja2==3.0.3', 'werkzeug==2.0.2'],
         entry_points={
             'console_scripts': ['myresume = myresume.runserver:main'],
         },
