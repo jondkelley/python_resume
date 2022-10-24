@@ -3,7 +3,8 @@
 # Description : Interactive online resume for jon-kelley.com
 
 import datetime
-from slugify import slugify
+import re
+import unidecode
 
 # Custom jinja2 globals
 # ---------------------
@@ -67,4 +68,5 @@ def calculate_age(born):
 
 
 def make_slug(text):
-    return slugify(text)
+    text = unidecode.unidecode(text).lower()
+    return re.sub(r'[\W_]+', '-', text)
