@@ -57,11 +57,11 @@ class TestRenderedJinjaStructure():
         assert r.status_code == 200
         assert 'About me.' in r.text
 
-    def test_index_contains_profile_age(self, wait_for_flask):
-        request_session, api_url = wait_for_flask
-        r = request_session.get(f'{api_url}')
-        assert r.status_code == 200
-        assert '<strong>Age:</strong><br />121 years old<br />' in r.text
+    # def test_index_contains_profile_age(self, wait_for_flask):
+    #     request_session, api_url = wait_for_flask
+    #     r = request_session.get(f'{api_url}')
+    #     assert r.status_code == 200
+    #     assert '<strong>Age:</strong><br />121 years old<br />' in r.text
 
     def test_index_contains_profile_location(self, wait_for_flask):
         request_session, api_url = wait_for_flask
