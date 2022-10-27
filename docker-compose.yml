@@ -1,12 +1,12 @@
 version: '2'
 
 services:
-  resume:
+  resume2:
     restart: unless-stopped
     environment:
       - UPDATE_SECRET=changeme
     build: .
-    container_name: resume
+    container_name: resume2
     ports:
       - 5001:5001
     volumes:
@@ -14,29 +14,29 @@ services:
       # to allow for local modifications and real-time development
       - ./resume.json:/resume/resume.json
       - ./resume.md.jinja2:/resume/resume.md.jinja2
-      - ./appvolume:/pandoc:Z
+      - appvolume:/pandoc
       #- app-volume:/pandoc:Z ## these types of volumes don't work with secured containers
     restart: always
     networks:
       - resume_net
-  pandoc:
+  pandoc2:
     restart: unless-stopped
     environment:
-      - MYRESUME_HOST=resume1:5001
+      - MYRESUME_HOST=resume2:5001
       - UPDATE_SECRET=changeme
     build:
       context: pandoc-sidecar
       dockerfile: Dockerfile
-    container_name: pandoc
+    container_name: pandoc2
     volumes:
-      - ./appvolume:/pandoc:Z
+      - appvolume:/pandoc
       #- app-volume:/pandoc:Z ## these types of volumes don't work with secured containers
     restart: always
     networks:
       - resume_net
 
 volumes:
-     app-volume:
+     appvolume:
 
 networks:
   resume_net:

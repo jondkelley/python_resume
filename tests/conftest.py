@@ -23,8 +23,8 @@ def wait_for_flask(function_scoped_container_getter):
                     status_forcelist=[500, 502, 503, 504])
     request_session.mount('http://', HTTPAdapter(max_retries=retries))
 
-    pandoc_container = function_scoped_container_getter.get("pandoc")
-    service = function_scoped_container_getter.get("resume").network_info[0]
+    pandoc_container = function_scoped_container_getter.get("pandoc2")
+    service = function_scoped_container_getter.get("resume2").network_info[0]
     api_url = "http://%s:%s/" % (service.hostname, service.host_port)
     assert request_session.get(api_url)
     return request_session, api_url
