@@ -1,12 +1,12 @@
 version: '2'
 
 services:
-  resume1:
+  resume:
     restart: unless-stopped
     environment:
       - UPDATE_SECRET=changeme
     build: .
-    container_name: resume1
+    container_name: resume
     ports:
       - 5001:5001
     volumes:
@@ -19,7 +19,7 @@ services:
     restart: always
     networks:
       - resume_net
-  pandoc1:
+  pandoc:
     restart: unless-stopped
     environment:
       - MYRESUME_HOST=resume1:5001
@@ -27,7 +27,7 @@ services:
     build:
       context: pandoc-sidecar
       dockerfile: Dockerfile
-    container_name: pandoc1
+    container_name: pandoc
     volumes:
       - ./appvolume:/pandoc:Z
       #- app-volume:/pandoc:Z ## these types of volumes don't work with secured containers
