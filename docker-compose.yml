@@ -22,7 +22,7 @@ services:
   pandoc:
     restart: unless-stopped
     environment:
-      - MYRESUME_HOST=resume:5001
+      - MYRESUME_HOST=resume1:5001
       - UPDATE_SECRET=changeme
     build:
       context: pandoc-sidecar

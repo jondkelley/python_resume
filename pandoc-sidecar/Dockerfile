@@ -1,6 +1,6 @@
 FROM pandoc/latex
 
-ENV MYRESUME_HOST="resume:5001"
+ENV MYRESUME_HOST="resume1:5001"
 ENV UPDATE_SECRET="changeme"
 
 RUN apk add --no-cache --upgrade bash curl
